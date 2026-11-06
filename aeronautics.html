@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aeronautics | AEROSPARK</title>
+<meta name="theme-color" content="#071323">
+<title>AEROSPARK | University of Aeronautical Engineering</title>
 
 <style>
 * {
@@ -13,127 +14,302 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #071323;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #06111f;
   color: #e8f2ff;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 header {
   background: #10283e;
-  padding: 20px;
+  padding: 18px 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1px solid #285578;
 }
 
-header h2 { color: #39baf5; letter-spacing: 2px; }
+header h2 {
+  color: #42bdff;
+  letter-spacing: 3px;
+  font-size: 25px;
+}
 
-a { color: #70d0ff; text-decoration: none; }
+header a,
+a {
+  color: #70d0ff;
+  text-decoration: none;
+}
 
 .hero {
   text-align: center;
-  padding: 55px 20px;
-  background: linear-gradient(140deg, #102e49, #071323);
+  padding: 75px 20px;
+  background: linear-gradient(145deg, #123b5c, #071323 75%);
+  border-bottom: 1px solid #285578;
+}
+
+.hero .eyebrow {
+  color: #8bdcff;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .hero h1 {
-  color: #40baf5;
-  font-size: 36px;
-  margin-bottom: 15px;
+  color: #43c0ff;
+  font-size: clamp(32px, 6vw, 52px);
+  margin: 15px 0;
+  line-height: 1.2;
 }
 
 .hero p {
-  max-width: 720px;
+  max-width: 850px;
   margin: auto;
   font-size: 18px;
+  color: #d5e9fa;
 }
 
-main {
-  max-width: 900px;
+.hero .tagline {
+  margin-top: 22px;
+  color: #8bdcff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 1150px;
   margin: auto;
-  padding: 25px 18px;
+  padding: 25px 20px;
 }
 
-h2 {
-  color: #49c2ff;
-  margin: 28px 0 15px;
+h2.section-title {
+  color: #48c3ff;
+  font-size: 28px;
+  margin: 45px 0 18px;
 }
 
-.card {
-  background: #112b43;
-  border: 1px solid #285578;
-  border-radius: 14px;
-  padding: 22px;
-  margin: 20px 0;
+h3 {
+  color: #91ddff;
 }
 
-.card h3 {
-  color: #85d8ff;
-  margin-bottom: 12px;
-}
-
-.card h4 {
-  color: #55c6fa;
-  margin: 18px 0 7px;
-}
-
-.card p { margin: 9px 0; }
-
-.card ul {
-  padding-left: 22px;
+p {
   margin: 10px 0;
 }
 
-.card li { margin: 8px 0; }
+.intro {
+  background: #10283e;
+  border: 1px solid #285578;
+  padding: 24px;
+  border-radius: 14px;
+  margin: 20px 0;
+}
 
-.level {
-  display: inline-block;
-  color: #9bdfff;
-  border: 1px solid #34749a;
-  border-radius: 20px;
-  padding: 3px 10px;
-  font-size: 12px;
+.navigation {
+  background: #10283e;
+  border: 1px solid #285578;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 25px 0;
+}
+
+.navigation h3 {
   margin-bottom: 12px;
 }
 
-.formula {
-  background: #06101e;
-  border-left: 4px solid #36bafa;
+.navigation a {
+  display: block;
+  padding: 9px 0;
+  border-bottom: 1px solid #25455e;
+}
+
+.navigation a:last-child {
+  border-bottom: none;
+}
+
+.department {
+  background: #0d2033;
+  border: 1px solid #2c5878;
+  border-radius: 16px;
+  padding: 25px;
+  margin: 30px 0;
+  scroll-margin-top: 15px;
+}
+
+.department-number {
+  color: #49c6ff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.department h2 {
+  color: #8bdcff;
+  font-size: 26px;
+  margin: 8px 0 15px;
+}
+
+.chapter {
+  background: #122d46;
+  border: 1px solid #2c5878;
+  padding: 19px;
+  margin: 17px 0;
+  border-radius: 11px;
+}
+
+.chapter h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.chapter h4 {
+  color: #4fc5ff;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+ul {
+  padding-left: 23px;
+  margin: 10px 0;
+}
+
+li {
+  margin: 7px 0;
+}
+
+.equation {
+  background: #04101c;
+  border-left: 4px solid #38bafa;
   padding: 18px;
   margin: 15px 0;
-  font-size: 19px;
+  border-radius: 5px;
+  font-size: 18px;
   overflow-wrap: anywhere;
 }
 
-.note {
-  background: #0a2034;
-  border-left: 3px solid #36bafa;
-  padding: 14px;
+.equation small {
+  display: block;
+  color: #b9d8ec;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.callout {
+  background: #09243a;
+  border-left: 4px solid #46bfff;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 5px;
+}
+
+.lab {
+  background: #102b28;
+  border-left: 4px solid #51d6a0;
+  padding: 16px;
   margin-top: 15px;
   border-radius: 5px;
 }
 
-.back {
+.research {
+  background: #28213b;
+  border-left: 4px solid #b89aff;
+  padding: 16px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+details {
+  background: #10283e;
+  border: 1px solid #285578;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 12px 0;
+}
+
+summary {
+  color: #80d9ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+details p {
+  margin-top: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.grid-card {
+  background: #112b43;
+  border: 1px solid #285578;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.grid-card h3 {
+  margin-bottom: 8px;
+}
+
+.capstone {
+  background: linear-gradient(145deg, #123c59, #102036);
+  border: 1px solid #3a80a8;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 25px 0;
+}
+
+.button {
   display: inline-block;
   background: #078bca;
   color: white;
   padding: 12px 22px;
   border-radius: 8px;
   margin-top: 20px;
+  font-weight: bold;
 }
 
 footer {
   background: #10283e;
   text-align: center;
-  padding: 25px;
-  margin-top: 40px;
+  padding: 30px 15px;
+  margin-top: 45px;
+  border-top: 1px solid #285578;
+}
+
+footer p {
+  color: #b9d8ec;
 }
 
 @media (max-width: 600px) {
-  .hero h1 { font-size: 30px; }
-  .card { padding: 18px; }
+  header {
+    padding: 15px;
+  }
+
+  .hero {
+    padding: 50px 18px;
+  }
+
+  .department {
+    padding: 17px;
+  }
+
+  .department h2 {
+    font-size: 22px;
+  }
+
+  .chapter {
+    padding: 15px;
+  }
 }
 </style>
 </head>
@@ -142,413 +318,604 @@ footer {
 
 <header>
   <h2>AEROSPARK</h2>
-  <a href="index.html">Home</a>
+  <a href="index.html">HOME</a>
 </header>
 
 <section class="hero">
-  <h1>AERONAUTICS</h1>
+  <div class="eyebrow">SCHOOL OF AEROSPACE ENGINEERING</div>
+
+  <h1>UNIVERSITY OF AERONAUTICS</h1>
+
   <p>
-    Explore advanced aircraft engineering, aerodynamic theory,
-    flight dynamics, structural design and propulsion technology.
-    Discover the science behind modern aviation.
+    An advanced academic learning programme covering aircraft
+    structures, computational aerodynamics, flight dynamics,
+    propulsion engineering and aerospace research.
+  </p>
+
+  <div class="tagline">
+    EXPLORE BEYOND. CALCULATE THE IMPOSSIBLE.
+  </div>
+</section>
+
+<main class="container">
+
+<section class="intro">
+  <h2>About the Aeronautics Programme</h2>
+
+  <p>
+    Aeronautical engineering is an interdisciplinary engineering
+    discipline concerned with the analysis, design, development,
+    testing and operation of aircraft operating within Earth's
+    atmosphere.
+  </p>
+
+  <p>
+    This academic programme introduces advanced engineering
+    principles from mechanics, applied mathematics, thermodynamics,
+    fluid dynamics, materials science, structural analysis,
+    propulsion and automatic control.
+  </p>
+
+  <p>
+    Students progress from fundamental physical principles to
+    mathematical modelling, engineering simulation, laboratory
+    investigation and independent research.
   </p>
 </section>
 
-<main>
+<section class="navigation">
+  <h3>ACADEMIC DEPARTMENT DIRECTORY</h3>
 
-<h2>Welcome to Advanced Aeronautics</h2>
+  <a href="#structures">01. Aircraft Structures and Design</a>
+  <a href="#aerodynamics">02. Advanced Aerodynamics and CFD</a>
+  <a href="#flight">03. Flight Dynamics and Control</a>
+  <a href="#propulsion">04. Propulsion and Engine Engineering</a>
+  <a href="#research">05. Research and Laboratory Programme</a>
+  <a href="#capstone">06. Final Aerospace Engineering Project</a>
+</section>
 
-<p>
-Aeronautics is the science and engineering of flight within
-Earth's atmosphere. It combines physics, mathematics,
-fluid mechanics, thermodynamics, materials science and
-control engineering to develop safe, efficient aircraft.
-</p>
+<!-- DEPARTMENT 01 -->
 
-<h2>Explore the Advanced Subjects</h2>
+<section class="department" id="structures">
 
-<!-- SUBJECT 1 -->
+<div class="department-number">DEPARTMENT 01 • AEROSPACE STRUCTURES</div>
 
-<div class="card">
-
-<span class="level">ADVANCED ENGINEERING • 01</span>
-
-<h3>1. Aircraft Fundamentals and Structural Design</h3>
+<h2>Aircraft Structures and Advanced Design Engineering</h2>
 
 <p>
-Study the complete engineering architecture of an aircraft.
-Understand how its structure carries aerodynamic loads,
-withstands vibration and fatigue, and maintains strength
-while minimizing weight.
+This department examines the mechanical architecture of
+aircraft and the engineering methods used to design
+lightweight, strong, durable and damage-tolerant structures.
 </p>
 
-<h4>Core Engineering Topics</h4>
+<div class="chapter">
+<h3>Chapter 1.1 — Aircraft Configuration and Architecture</h3>
+
+<p>
+Aircraft configuration is the arrangement of the major
+components that determine aerodynamic performance,
+structural efficiency, stability and operational capability.
+</p>
 
 <ul>
-<li><strong>Airframe Architecture:</strong>
-Fuselage, wings, empennage, nacelles, landing gear
-and structural load paths.</li>
-
-<li><strong>Wing Structural Design:</strong>
-Spars, ribs, stringers, skin panels, torsion boxes,
-wing bending and twisting loads.</li>
-
-<li><strong>Advanced Materials:</strong>
-Aluminium alloys, titanium alloys, carbon-fibre composites,
-material selection and corrosion protection.</li>
-
-<li><strong>Structural Mechanics:</strong>
-Tension, compression, shear, bending, torsion,
-buckling and stress concentration.</li>
-
-<li><strong>Fatigue Engineering:</strong>
-Repeated loading, crack growth, damage tolerance
-and aircraft structural inspection.</li>
-
-<li><strong>Flight Control Hardware:</strong>
-Ailerons, elevators, rudders, flaps, slats,
-spoilers, hinges and actuators.</li>
-
-<li><strong>Landing Gear Systems:</strong>
-Shock absorbers, tyres, braking systems,
-steering and landing impact loads.</li>
+<li>Fuselage geometry and cabin pressurisation.</li>
+<li>High-wing, low-wing and mid-wing configurations.</li>
+<li>Wing sweep, taper ratio, aspect ratio and dihedral.</li>
+<li>Horizontal and vertical stabiliser configurations.</li>
+<li>Conventional, canard and flying-wing aircraft.</li>
+<li>Engine placement and nacelle integration.</li>
+<li>Landing gear configuration and ground loads.</li>
 </ul>
 
-<h4>Engineering Analysis</h4>
-
-<p>
-Engineers use free-body diagrams, structural calculations,
-finite-element analysis and physical testing to evaluate
-aircraft strength and reliability.
-</p>
-
-<div class="formula">
-Stress: σ = F / A
-<br><br>
-Strain: ε = ΔL / L
-<br><br>
-Young's Modulus: E = σ / ε
+<div class="callout">
+<strong>Design investigation:</strong>
+Compare conventional and flying-wing aircraft
+configurations in terms of stability, structural arrangement,
+drag and usable internal volume.
+</div>
 </div>
 
-<p>
-σ = Normal stress<br>
-F = Applied force<br>
-A = Cross-sectional area<br>
-ε = Strain<br>
-E = Young's modulus
-</p>
-
-<div class="note">
-<strong>Advanced Challenge:</strong>
-How can engineers reduce aircraft wing weight without
-causing excessive bending, vibration or structural failure?
-</div>
-
-</div>
-
-<!-- SUBJECT 2 -->
-
-<div class="card">
-
-<span class="level">ADVANCED ENGINEERING • 02</span>
-
-<h3>2. Aerodynamics and Fluid Dynamics</h3>
+<div class="chapter">
+<h3>Chapter 1.2 — Aircraft Structural Mechanics</h3>
 
 <p>
-Investigate how air moves around aircraft surfaces and
-creates aerodynamic forces and moments. Understand
-the physical principles behind lift, drag, pressure,
-flow separation and high-speed flight.
+Structural mechanics studies how aircraft components respond
+to external loads, internal forces and deformation.
 </p>
 
-<h4>Core Engineering Topics</h4>
+<h4>Advanced topics</h4>
 
 <ul>
-<li><strong>Fluid Flow Fundamentals:</strong>
-Pressure, density, temperature, viscosity and
-conservation of mass, momentum and energy.</li>
-
-<li><strong>Airfoil Theory:</strong>
-Chord, camber, angle of attack, circulation,
-pressure distribution and lift generation.</li>
-
-<li><strong>Boundary Layer Theory:</strong>
-Laminar flow, turbulent flow, transition,
-skin-friction drag and flow separation.</li>
-
-<li><strong>Drag Analysis:</strong>
-Parasite drag, induced drag, pressure drag,
-wave drag and drag reduction.</li>
-
-<li><strong>High-Speed Aerodynamics:</strong>
-Mach number, compressibility, shock waves,
-expansion waves and transonic drag rise.</li>
-
-<li><strong>Stall Physics:</strong>
-Critical angle of attack, airflow separation,
-stall warning and high-lift systems.</li>
-
-<li><strong>Computational Fluid Dynamics:</strong>
-CFD simulations, wind-tunnel testing,
-pressure measurements and flow visualization.</li>
+<li>Normal stress and shear stress.</li>
+<li>Elasticity and plastic deformation.</li>
+<li>Beam bending and shear-force diagrams.</li>
+<li>Torsion of thin-walled structures.</li>
+<li>Combined loading and principal stresses.</li>
+<li>Column buckling and plate instability.</li>
+<li>Energy methods and structural deflection.</li>
+<li>Load transfer through aircraft joints.</li>
 </ul>
 
-<h4>Important Aerodynamic Equations</h4>
+<div class="equation">
+Normal stress: σ = F / A
 
-<div class="formula">
-Lift:
-<br>
-L = ½ ρ V² S C<sub>L</sub>
 <br><br>
-Drag:
-<br>
-D = ½ ρ V² S C<sub>D</sub>
+
+Axial strain: ε = ΔL / L
+
 <br><br>
-Mach Number:
-<br>
+
+Hooke's law: σ = Eε
+
+<br><br>
+
+Bending stress: σ = My / I
+
+<small>
+F = Applied force; A = Cross-sectional area;
+E = Young's modulus; M = Bending moment;
+y = Distance from neutral axis; I = Second moment of area.
+</small>
+</div>
+
+<div class="callout">
+<strong>Engineering application:</strong>
+Estimate the bending stress in a simplified wing spar
+under a specified bending moment.
+</div>
+</div>
+
+<div class="chapter">
+<h3>Chapter 1.3 — Advanced Aerospace Materials</h3>
+
+<p>
+Material engineering determines how aircraft achieve
+high strength-to-weight ratios, fatigue resistance,
+temperature resistance and long service life.
+</p>
+
+<ul>
+<li>Aluminium-lithium aerospace alloys.</li>
+<li>Titanium alloys and high-temperature applications.</li>
+<li>Carbon-fibre-reinforced polymer composites.</li>
+<li>Glass-fibre and aramid-fibre composites.</li>
+<li>Composite laminate theory.</li>
+<li>Matrix and fibre failure mechanisms.</li>
+<li>Corrosion, oxidation and environmental degradation.</li>
+<li>Adhesive bonding, riveting and advanced joining.</li>
+<li>Material testing and certification principles.</li>
+</ul>
+
+<div class="equation">
+Specific strength = Strength / Density
+
+<br><br>
+
+Specific stiffness = Elastic modulus / Density
+</div>
+
+<div class="research">
+<strong>Research topic:</strong>
+Investigate why carbon-fibre composites are used in
+modern aircraft structures and examine their limitations
+in impact damage, repair and recycling.
+</div>
+</div>
+
+<div class="chapter">
+<h3>Chapter 1.4 — Fatigue, Fracture and Damage Tolerance</h3>
+
+<ul>
+<li>Fatigue under repeated loading.</li>
+<li>Crack initiation and propagation.</li>
+<li>Fracture toughness.</li>
+<li>Stress intensity factors.</li>
+<li>Damage-tolerant structural design.</li>
+<li>Non-destructive inspection techniques.</li>
+<li>Ultrasonic, radiographic and eddy-current testing.</li>
+<li>Structural health monitoring.</li>
+</ul>
+
+<div class="equation">
+Stress intensity factor:
+
+K = Yσ√(πa)
+
+<small>
+Y = Geometry factor; σ = Applied stress;
+a = Characteristic crack size.
+This is a simplified linear-elastic fracture mechanics relationship.
+</small>
+</div>
+</div>
+
+<div class="chapter">
+<h3>Chapter 1.5 — Finite Element Analysis</h3>
+
+<p>
+Finite Element Analysis (FEA) divides a complex structure
+into smaller computational elements to estimate its
+response to applied forces and boundary conditions.
+</p>
+
+<ul>
+<li>One-dimensional, two-dimensional and three-dimensional elements.</li>
+<li>Mesh generation and convergence.</li>
+<li>Boundary conditions and load application.</li>
+<li>Linear and nonlinear structural analysis.</li>
+<li>Modal analysis and vibration.</li>
+<li>Thermal stress analysis.</li>
+<li>Interpretation of displacement and stress contours.</li>
+<li>Validation against analytical solutions and experiments.</li>
+</ul>
+
+<div class="research">
+<strong>Research project:</strong>
+Create a simplified finite-element model of an aircraft
+wing rib and investigate how changing material properties
+affects deformation and stress distribution.
+</div>
+</div>
+
+</section>
+
+<!-- DEPARTMENT 02 -->
+
+<section class="department" id="aerodynamics">
+
+<div class="department-number">DEPARTMENT 02 • FLUID MECHANICS</div>
+
+<h2>Advanced Aerodynamics and Computational Fluid Dynamics</h2>
+
+<p>
+This department explores the physics and mathematics
+of airflow around aircraft, from low-speed incompressible
+flow to high-speed compressible and transonic conditions.
+</p>
+
+<div class="chapter">
+<h3>Chapter 2.1 — Mathematical Foundations of Fluid Flow</h3>
+
+<ul>
+<li>Fluid properties and continuum hypothesis.</li>
+<li>Pressure, density, temperature and viscosity.</li>
+<li>Velocity fields and flow visualisation.</li>
+<li>Streamlines, pathlines and streaklines.</li>
+<li>Material derivatives.</li>
+<li>Conservation of mass, momentum and energy.</li>
+<li>Control-volume analysis.</li>
+</ul>
+
+<div class="equation">
+Continuity equation for steady incompressible
+one-dimensional flow:
+
+A₁V₁ = A₂V₂
+
+<br><br>
+
+Bernoulli equation along a streamline
+for ideal steady incompressible flow:
+
+p + ½ρV² + ρgh = constant
+
+<small>
+A = Flow area; V = Velocity; p = Pressure;
+ρ = Density; g = Gravitational acceleration; h = Elevation.
+</small>
+</div>
+</div>
+
+<div class="chapter">
+<h3>Chapter 2.2 — Governing Equations of Fluid Mechanics</h3>
+
+<p>
+The Navier–Stokes equations express conservation of
+momentum in a moving fluid. They are fundamental to
+modern computational and theoretical aerodynamics.
+</p>
+
+<ul>
+<li>Conservation of mass.</li>
+<li>Conservation of linear momentum.</li>
+<li>Conservation of energy.</li>
+<li>Newtonian and non-Newtonian fluid models.</li>
+<li>Incompressible and compressible flow formulations.</li>
+<li>Boundary and initial conditions.</li>
+<li>Analytical and numerical solution methods.</li>
+</ul>
+
+<div class="equation">
+Reynolds number:
+
+Re = ρVL / μ
+
+<br><br>
+
+Mach number:
+
 M = V / a
+
+<small>
+L = Characteristic length; μ = Dynamic viscosity;
+a = Local speed of sound.
+</small>
+</div>
 </div>
 
-<p>
-ρ = Air density<br>
-V = True airspeed<br>
-S = Reference wing area<br>
-C<sub>L</sub> = Lift coefficient<br>
-C<sub>D</sub> = Drag coefficient<br>
-a = Local speed of sound
-</p>
-
-<div class="note">
-<strong>Advanced Challenge:</strong>
-Why does aerodynamic drag increase significantly
-when an aircraft approaches transonic speeds?
-</div>
-
-</div>
-
-<!-- SUBJECT 3 -->
-
-<div class="card">
-
-<span class="level">ADVANCED ENGINEERING • 03</span>
-
-<h3>3. Flight Mechanics, Stability and Control</h3>
-
-<p>
-Analyse aircraft motion in three-dimensional space.
-Learn how aerodynamic forces, aircraft mass, inertia
-and control systems determine flight behaviour.
-</p>
-
-<h4>Core Engineering Topics</h4>
+<div class="chapter">
+<h3>Chapter 2.3 — Airfoil Theory and Wing Aerodynamics</h3>
 
 <ul>
-<li><strong>Aircraft Motion:</strong>
-Longitudinal, lateral and directional motion;
-roll, pitch and yaw.</li>
-
-<li><strong>Equations of Motion:</strong>
-Force balance, moment balance, acceleration,
-angular velocity and moments of inertia.</li>
-
-<li><strong>Static Stability:</strong>
-The tendency of an aircraft to return toward
-equilibrium after a disturbance.</li>
-
-<li><strong>Dynamic Stability:</strong>
-Oscillations, damping, phugoid motion
-and short-period motion.</li>
-
-<li><strong>Aircraft Control:</strong>
-Ailerons, elevators, rudders, control forces
-and control-system response.</li>
-
-<li><strong>Flight Performance:</strong>
-Take-off distance, landing distance, climb rate,
-maximum altitude, range and endurance.</li>
-
-<li><strong>Turning Flight:</strong>
-Bank angle, load factor, turn radius
-and coordinated manoeuvres.</li>
-
-<li><strong>Modern Flight Control:</strong>
-Autopilot, sensors, feedback systems,
-fly-by-wire and digital control laws.</li>
+<li>Airfoil geometry and aerodynamic reference axes.</li>
+<li>Chord, camber and thickness distributions.</li>
+<li>Angle of attack and aerodynamic incidence.</li>
+<li>Pressure coefficient distributions.</li>
+<li>Circulation and lift generation.</li>
+<li>Thin-airfoil theory.</li>
+<li>Finite-wing effects and induced drag.</li>
+<li>Wingtip vortices and downwash.</li>
+<li>High-lift devices and stall characteristics.</li>
 </ul>
 
-<h4>Important Flight Mechanics Equations</h4>
+<div class="equation">
+Lift:
 
-<div class="formula">
-Load Factor:
-<br>
-n = L / W
+L = ½ρV²SC<sub>L</sub>
+
 <br><br>
-Turn Radius:
-<br>
-r = V² / (g tan φ)
+
+Drag:
+
+D = ½ρV²SC<sub>D</sub>
+
+<br><br>
+
+Pressure coefficient:
+
+C<sub>p</sub> = (p - p∞) / (½ρV∞²)
 </div>
 
-<p>
-n = Load factor<br>
-L = Lift force<br>
-W = Aircraft weight<br>
-r = Turn radius<br>
-V = Aircraft speed<br>
-g = Gravitational acceleration<br>
-φ = Bank angle
-</p>
-
-<p>
-The turn-radius relationship applies to a coordinated,
-level turn under simplified conditions.
-</p>
-
-<div class="note">
-<strong>Advanced Challenge:</strong>
-How does the centre of gravity influence aircraft
-stability, handling and control?
+<div class="research">
+<strong>Research question:</strong>
+How do wing aspect ratio and induced drag influence
+the aerodynamic efficiency of a long-range aircraft?
+</div>
 </div>
 
-</div>
-
-<!-- SUBJECT 4 -->
-
-<div class="card">
-
-<span class="level">ADVANCED ENGINEERING • 04</span>
-
-<h3>4. Aircraft Propulsion and Engine Performance</h3>
-
-<p>
-Explore how aircraft engines convert fuel energy
-into mechanical power and thrust. Study the relationship
-between thermodynamics, combustion, rotating machinery
-and propulsion efficiency.
-</p>
-
-<h4>Core Engineering Topics</h4>
+<div class="chapter">
+<h3>Chapter 2.4 — Boundary Layers and Flow Separation</h3>
 
 <ul>
-<li><strong>Piston Engines:</strong>
-Four-stroke cycles, cylinders, crankshafts,
-ignition systems and propeller power.</li>
+<li>Boundary-layer formation on aircraft surfaces.</li>
+<li>Laminar and turbulent boundary layers.</li>
+<li>Boundary-layer transition.</li>
+<li>Skin-friction drag.</li>
+<li>Adverse pressure gradients.</li>
+<li>Flow separation and stall.</li>
+<li>Boundary-layer control techniques.</li>
+<li>Surface roughness and contamination effects.</li>
+</ul>
+</div>
 
-<li><strong>Gas Turbine Architecture:</strong>
-Air intake, compressor, combustion chamber,
-turbine and exhaust nozzle.</li>
+<div class="chapter">
+<h3>Chapter 2.5 — Compressible and High-Speed Aerodynamics</h3>
 
-<li><strong>Engine Types:</strong>
-Turbojet, turbofan, turboprop and turboshaft
-engines and their applications.</li>
-
-<li><strong>Thermodynamic Cycles:</strong>
-Brayton cycle, compression, combustion,
-expansion and exhaust.</li>
-
-<li><strong>Thrust Generation:</strong>
-Mass flow, exhaust velocity, momentum change
-and pressure thrust.</li>
-
-<li><strong>Engine Performance:</strong>
-Thrust, power, thermal efficiency,
-propulsive efficiency and fuel consumption.</li>
-
-<li><strong>Advanced Technologies:</strong>
-High-bypass turbofans, geared turbofans,
-engine materials and emissions reduction.</li>
-
-<li><strong>Future Propulsion:</strong>
-Sustainable aviation fuels, hybrid-electric
-propulsion and hydrogen-powered concepts.</li>
+<ul>
+<li>Compressibility effects and density variation.</li>
+<li>Subsonic, transonic, supersonic and hypersonic regimes.</li>
+<li>Normal and oblique shock waves.</li>
+<li>Prandtl–Meyer expansion waves.</li>
+<li>Mach cones and characteristic lines.</li>
+<li>Shock-boundary-layer interaction.</li>
+<li>Wave drag and transonic drag rise.</li>
+<li>Supersonic airfoil and wing configurations.</li>
 </ul>
 
-<h4>Fundamental Propulsion Equation</h4>
+<div class="equation">
+Mach number:
 
-<div class="formula">
-F ≈ ṁ (V<sub>e</sub> − V<sub>0</sub>)
+M = V / a
+
+<br><br>
+
+Speed of sound in an ideal gas:
+
+a = √(γRT)
+
+<small>
+γ = Specific heat ratio; R = Specific gas constant;
+T = Absolute temperature.
+</small>
+</div>
 </div>
 
-<p>
-F = Simplified momentum thrust<br>
-ṁ = Mass flow rate<br>
-V<sub>e</sub> = Exhaust velocity<br>
-V<sub>0</sub> = Aircraft flight speed
-</p>
+<div class="chapter">
+<h3>Chapter 2.6 — Computational Fluid Dynamics (CFD)</h3>
 
 <p>
-A complete engine calculation also considers
-pressure thrust and bypass flow where applicable.
+CFD uses numerical methods to approximate the governing
+equations of fluid flow and predict aerodynamic behaviour.
 </p>
 
-<div class="note">
-<strong>Advanced Challenge:</strong>
-Why are high-bypass turbofan engines efficient
-for modern passenger aircraft?
+<ul>
+<li>Computational domain creation.</li>
+<li>Geometry preparation and surface modelling.</li>
+<li>Structured and unstructured mesh generation.</li>
+<li>Finite volume and finite element methods.</li>
+<li>Boundary-condition specification.</li>
+<li>Turbulence modelling.</li>
+<li>Steady and unsteady simulations.</li>
+<li>Residual convergence and grid independence.</li>
+<li>Post-processing pressure, velocity and turbulence fields.</li>
+<li>Comparison with wind-tunnel and experimental data.</li>
+</ul>
+
+<div class="lab">
+<strong>Laboratory exercise:</strong>
+Develop a simple two-dimensional airfoil-flow study.
+Compare predicted pressure distributions at two
+angles of attack and discuss the assumptions and
+limitations of the numerical model.
+</div>
 </div>
 
+</section>
+
+<!-- DEPARTMENT 03 -->
+
+<section class="department" id="flight">
+
+<div class="department-number">DEPARTMENT 03 • FLIGHT SCIENCE AND CONTROL</div>
+
+<h2>Flight Dynamics, Stability and Automatic Control</h2>
+
+<p>
+This department examines the motion, performance,
+stability and control of aircraft using mathematical
+models and engineering control theory.
+</p>
+
+<div class="chapter">
+<h3>Chapter 3.1 — Aircraft Coordinate Systems and Kinematics</h3>
+
+<ul>
+<li>Earth-fixed and body-fixed coordinate systems.</li>
+<li>Inertial and aerodynamic reference frames.</li>
+<li>Euler angles and attitude representation.</li>
+<li>Translational velocity and acceleration.</li>
+<li>Angular velocity and angular acceleration.</li>
+<li>Roll, pitch and yaw.</li>
+<li>Transformation matrices and coordinate rotation.</li>
+</ul>
+
+<div class="callout">
+<strong>Learning outcome:</strong>
+Understand how an aircraft's orientation and velocity
+are represented mathematically in three-dimensional space.
+</div>
 </div>
 
-<h2>Important Engineering Formula</h2>
-
-<div class="card">
-
-<h3>The Aircraft Lift Equation</h3>
+<div class="chapter">
+<h3>Chapter 3.2 — Six-Degree-of-Freedom Equations of Motion</h3>
 
 <p>
-The lift equation estimates the aerodynamic
-force generated by an aircraft wing.
+Aircraft motion can be represented through six
+degrees of freedom: three translational and three rotational.
 </p>
 
-<div class="formula">
-L = ½ × ρ × V² × S × C<sub>L</sub>
+<ul>
+<li>Longitudinal force equations.</li>
+<li>Lateral and directional force equations.</li>
+<li>Rotational moment equations.</li>
+<li>Aircraft mass and inertia tensor.</li>
+<li>Gravity and aerodynamic force components.</li>
+<li>Propulsive forces and control moments.</li>
+<li>Nonlinear aircraft dynamic models.</li>
+</ul>
+
+<div class="equation">
+Newton's second law:
+
+ΣF = ma
+
+<br><br>
+
+Rotational dynamics:
+
+ΣM = dH/dt
+
+<small>
+F = Resultant force; m = Mass; a = Acceleration;
+M = Resultant moment; H = Angular momentum.
+</small>
+</div>
 </div>
 
-<p>
-L = Lift force (Newtons)<br>
-ρ = Air density (kg/m³)<br>
-V = True airspeed (m/s)<br>
-S = Reference wing area (m²)<br>
-C<sub>L</sub> = Lift coefficient
-</p>
+<div class="chapter">
+<h3>Chapter 3.3 — Static and Dynamic Stability</h3>
 
-<p>
-Lift varies with the square of airspeed when
-the other variables remain constant. The lift
-coefficient changes with angle of attack,
-airfoil geometry and flow conditions.
-</p>
+<ul>
+<li>Longitudinal static stability.</li>
+<li>Directional static stability.</li>
+<li>Lateral static stability.</li>
+<li>Centre-of-gravity effects.</li>
+<li>Neutral point and static margin.</li>
+<li>Stability derivatives.</li>
+<li>Dynamic response and damping.</li>
+<li>Short-period and phugoid modes.</li>
+<li>Dutch roll, spiral and roll subsidence modes.</li>
+</ul>
 
+<div class="research">
+<strong>Research investigation:</strong>
+Study how moving an aircraft's centre of gravity
+changes longitudinal stability and control requirements.
+</div>
 </div>
 
-<h2>Advanced Engineering Mission</h2>
+<div class="chapter">
+<h3>Chapter 3.4 — Aircraft Performance Engineering</h3>
 
-<div class="card">
+<ul>
+<li>Thrust required and power required.</li>
+<li>Maximum and minimum level-flight speed.</li>
+<li>Rate and angle of climb.</li>
+<li>Service ceiling and absolute ceiling.</li>
+<li>Take-off and landing performance.</li>
+<li>Range and endurance calculations.</li>
+<li>Specific excess power.</li>
+<li>Load factor and manoeuvring limits.</li>
+<li>Turning performance and sustained turns.</li>
+</ul>
 
-<h3>Aircraft Engineering Challenge</h3>
+<div class="equation">
+Load factor:
 
-<p>
-Choose a passenger aircraft and investigate
-how its wing structure, materials, aerodynamic
-design, flight-control surfaces and engines
-work together.
-</p>
+n = L / W
 
-<p>
-Explain how these systems contribute to
-aircraft safety, stability and fuel efficiency.
-</p>
+<br><br>
 
+Coordinated level-turn radius:
+
+r = V² / (g tan φ)
+
+<br><br>
+
+Coordinated level-turn rate:
+
+ω = g tan φ / V
+
+<small>
+These turn equations assume a coordinated, level turn.
+V = Speed; g = Gravitational acceleration;
+φ = Bank angle.
+</small>
+</div>
 </div>
 
-<a class="back" href="index.html">← Back to Home</a>
+<div class="chapter">
+<h3>Chapter 3.5 — Automatic Flight Control Systems</h3>
 
-</main>
+<ul>
+<li>Open-loop and closed-loop control.</li>
+<li>Feedback and sensor systems.</li>
+<li>Transfer functions and block diagrams.</li>
+<li>Laplace transforms and system response.</li>
+<li>PID controller fundamentals.</li>
+<li>Stability margins and frequency response.</li>
+<li>Autopilot architecture.</li>
+<li>Fly-by-wire control systems.</li>
+<li>Fault tolerance and control redundancy.</li>
+<li>Flight-control system verification.</li>
+</ul>
 
-<footer>
-<p>© 2026 AEROSPARK | Explore Beyond.</p>
-<p>Aerospace Technology and Learning Platform</p>
-</footer>
+<div class="equation">
+PID control law:
 
-</body>
-    </html>
-      
+u(t) = Kp e(t)
+       + Ki ∫e(t)dt
+       + Kd de(t)/dt
+
+<small>
+Kp = Proportional
