@@ -1,216 +1,554 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aeronautics | AEROSPARK</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeronautics | AEROSPARK</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #071323;
-      color: #e8f2ff;
-      line-height: 1.7;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #071323;
+  color: #e8f2ff;
+  line-height: 1.7;
+}
 
-    header {
-      background: #10283e;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+header {
+  background: #10283e;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    header h2 {
-      color: #39baf5;
-      letter-spacing: 2px;
-    }
+header h2 { color: #39baf5; letter-spacing: 2px; }
 
-    a {
-      color: #70d0ff;
-      text-decoration: none;
-    }
+a { color: #70d0ff; text-decoration: none; }
 
-    .hero {
-      text-align: center;
-      padding: 65px 20px;
-      background: linear-gradient(140deg, #102e49, #071323);
-    }
+.hero {
+  text-align: center;
+  padding: 55px 20px;
+  background: linear-gradient(140deg, #102e49, #071323);
+}
 
-    .hero h1 {
-      color: #40baf5;
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
+.hero h1 {
+  color: #40baf5;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
 
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      font-size: 18px;
-    }
+.hero p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 18px;
+}
 
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 25px 18px;
-    }
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px 18px;
+}
 
-    h2 {
-      color: #49c2ff;
-      margin: 25px 0 15px;
-    }
+h2 {
+  color: #49c2ff;
+  margin: 28px 0 15px;
+}
 
-    .card {
-      background: #112b43;
-      border: 1px solid #285578;
-      border-radius: 14px;
-      padding: 22px;
-      margin: 18px 0;
-    }
+.card {
+  background: #112b43;
+  border: 1px solid #285578;
+  border-radius: 14px;
+  padding: 22px;
+  margin: 20px 0;
+}
 
-    .card h3 {
-      color: #85d8ff;
-      margin-bottom: 8px;
-    }
+.card h3 {
+  color: #85d8ff;
+  margin-bottom: 12px;
+}
 
-    .formula {
-      background: #06101e;
-      border-left: 4px solid #36bafa;
-      padding: 18px;
-      margin-top: 15px;
-      font-size: 19px;
-      overflow-wrap: anywhere;
-    }
+.card h4 {
+  color: #55c6fa;
+  margin: 18px 0 7px;
+}
 
-    footer {
-      background: #10283e;
-      text-align: center;
-      padding: 25px;
-      margin-top: 40px;
-    }
+.card p { margin: 9px 0; }
 
-    .back {
-      display: inline-block;
-      background: #078bca;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-  </style>
+.card ul {
+  padding-left: 22px;
+  margin: 10px 0;
+}
+
+.card li { margin: 8px 0; }
+
+.level {
+  display: inline-block;
+  color: #9bdfff;
+  border: 1px solid #34749a;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.formula {
+  background: #06101e;
+  border-left: 4px solid #36bafa;
+  padding: 18px;
+  margin: 15px 0;
+  font-size: 19px;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  background: #0a2034;
+  border-left: 3px solid #36bafa;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.back {
+  display: inline-block;
+  background: #078bca;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+footer {
+  background: #10283e;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 30px; }
+  .card { padding: 18px; }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h2>AEROSPARK</h2>
-    <a href="index.html">Home</a>
-  </header>
+<header>
+  <h2>AEROSPARK</h2>
+  <a href="index.html">Home</a>
+</header>
 
-  <section class="hero">
-    <h1>AERONAUTICS</h1>
-    <p>
-      Discover the science of flight, aircraft design,
-      aerodynamics and flight mechanics.
-      Begin your journey into aerospace engineering.
-    </p>
-  </section>
+<section class="hero">
+  <h1>AERONAUTICS</h1>
+  <p>
+    Explore advanced aircraft engineering, aerodynamic theory,
+    flight dynamics, structural design and propulsion technology.
+    Discover the science behind modern aviation.
+  </p>
+</section>
 
-  <main>
+<main>
 
-    <h2>Welcome to Aeronautics</h2>
-    <p>
-      Aeronautics is the science and engineering of flight
-      within Earth's atmosphere. It involves designing,
-      developing and understanding aircraft.
-    </p>
+<h2>Welcome to Advanced Aeronautics</h2>
 
-    <h2>Explore the Subjects</h2>
+<p>
+Aeronautics is the science and engineering of flight within
+Earth's atmosphere. It combines physics, mathematics,
+fluid mechanics, thermodynamics, materials science and
+control engineering to develop safe, efficient aircraft.
+</p>
 
-    <div class="card">
-      <h3>1. Aircraft Fundamentals</h3>
-      <p>
-        Learn about aircraft structures, wings, fuselage,
-        engines, landing gear and control surfaces.
-      </p>
-    </div>
+<h2>Explore the Advanced Subjects</h2>
 
-    <div class="card">
-      <h3>2. Aerodynamics</h3>
-      <p>
-        Study how air flows around aircraft and how
-        lift, drag and pressure affect flight.
-      </p>
-    </div>
+<!-- SUBJECT 1 -->
 
-    <div class="card">
-      <h3>3. Flight Mechanics</h3>
-      <p>
-        Understand aircraft motion, stability,
-        control, climb, descent and turning.
-      </p>
-    </div>
+<div class="card">
 
-    <div class="card">
-      <h3>4. Aircraft Propulsion</h3>
-      <p>
-        Discover piston engines, turbofan engines,
-        turbojets and the principles of thrust.
-      </p>
-    </div>
+<span class="level">ADVANCED ENGINEERING • 01</span>
 
-    <h2>Important Engineering Formula</h2>
+<h3>1. Aircraft Fundamentals and Structural Design</h3>
 
-    <div class="card">
-      <h3>Lift Equation</h3>
-      <p>
-        The lift equation estimates the aerodynamic
-        lift generated by a wing.
-      </p>
+<p>
+Study the complete engineering architecture of an aircraft.
+Understand how its structure carries aerodynamic loads,
+withstands vibration and fatigue, and maintains strength
+while minimizing weight.
+</p>
 
-      <div class="formula">
-        L = ½ × ρ × V² × S × C<sub>L</sub>
-      </div>
+<h4>Core Engineering Topics</h4>
 
-      <p>
-        L = Lift force (newtons)<br>
-        ρ = Air density (kg/m³)<br>
-        V = Airspeed (m/s)<br>
-        S = Wing area (m²)<br>
-        C<sub>L</sub> = Lift coefficient
-      </p>
-    </div>
+<ul>
+<li><strong>Airframe Architecture:</strong>
+Fuselage, wings, empennage, nacelles, landing gear
+and structural load paths.</li>
 
-    <h2>Start Learning</h2>
+<li><strong>Wing Structural Design:</strong>
+Spars, ribs, stringers, skin panels, torsion boxes,
+wing bending and twisting loads.</li>
 
-    <div class="card">
-      <h3>Your First Lesson</h3>
-      <p>
-        Start by learning the four forces of flight:
-        lift, weight, thrust and drag.
-      </p>
-      <p>
-        These forces help explain how an aircraft
-        takes off, flies and lands.
-      </p>
-    </div>
+<li><strong>Advanced Materials:</strong>
+Aluminium alloys, titanium alloys, carbon-fibre composites,
+material selection and corrosion protection.</li>
 
-    <a class="back" href="index.html">← Back to Home</a>
+<li><strong>Structural Mechanics:</strong>
+Tension, compression, shear, bending, torsion,
+buckling and stress concentration.</li>
 
-  </main>
+<li><strong>Fatigue Engineering:</strong>
+Repeated loading, crack growth, damage tolerance
+and aircraft structural inspection.</li>
 
-  <footer>
-    <p>© 2026 AEROSPARK | Explore Beyond.</p>
-    <p>Aerospace Technology and Learning Platform</p>
-  </footer>
+<li><strong>Flight Control Hardware:</strong>
+Ailerons, elevators, rudders, flaps, slats,
+spoilers, hinges and actuators.</li>
+
+<li><strong>Landing Gear Systems:</strong>
+Shock absorbers, tyres, braking systems,
+steering and landing impact loads.</li>
+</ul>
+
+<h4>Engineering Analysis</h4>
+
+<p>
+Engineers use free-body diagrams, structural calculations,
+finite-element analysis and physical testing to evaluate
+aircraft strength and reliability.
+</p>
+
+<div class="formula">
+Stress: σ = F / A
+<br><br>
+Strain: ε = ΔL / L
+<br><br>
+Young's Modulus: E = σ / ε
+</div>
+
+<p>
+σ = Normal stress<br>
+F = Applied force<br>
+A = Cross-sectional area<br>
+ε = Strain<br>
+E = Young's modulus
+</p>
+
+<div class="note">
+<strong>Advanced Challenge:</strong>
+How can engineers reduce aircraft wing weight without
+causing excessive bending, vibration or structural failure?
+</div>
+
+</div>
+
+<!-- SUBJECT 2 -->
+
+<div class="card">
+
+<span class="level">ADVANCED ENGINEERING • 02</span>
+
+<h3>2. Aerodynamics and Fluid Dynamics</h3>
+
+<p>
+Investigate how air moves around aircraft surfaces and
+creates aerodynamic forces and moments. Understand
+the physical principles behind lift, drag, pressure,
+flow separation and high-speed flight.
+</p>
+
+<h4>Core Engineering Topics</h4>
+
+<ul>
+<li><strong>Fluid Flow Fundamentals:</strong>
+Pressure, density, temperature, viscosity and
+conservation of mass, momentum and energy.</li>
+
+<li><strong>Airfoil Theory:</strong>
+Chord, camber, angle of attack, circulation,
+pressure distribution and lift generation.</li>
+
+<li><strong>Boundary Layer Theory:</strong>
+Laminar flow, turbulent flow, transition,
+skin-friction drag and flow separation.</li>
+
+<li><strong>Drag Analysis:</strong>
+Parasite drag, induced drag, pressure drag,
+wave drag and drag reduction.</li>
+
+<li><strong>High-Speed Aerodynamics:</strong>
+Mach number, compressibility, shock waves,
+expansion waves and transonic drag rise.</li>
+
+<li><strong>Stall Physics:</strong>
+Critical angle of attack, airflow separation,
+stall warning and high-lift systems.</li>
+
+<li><strong>Computational Fluid Dynamics:</strong>
+CFD simulations, wind-tunnel testing,
+pressure measurements and flow visualization.</li>
+</ul>
+
+<h4>Important Aerodynamic Equations</h4>
+
+<div class="formula">
+Lift:
+<br>
+L = ½ ρ V² S C<sub>L</sub>
+<br><br>
+Drag:
+<br>
+D = ½ ρ V² S C<sub>D</sub>
+<br><br>
+Mach Number:
+<br>
+M = V / a
+</div>
+
+<p>
+ρ = Air density<br>
+V = True airspeed<br>
+S = Reference wing area<br>
+C<sub>L</sub> = Lift coefficient<br>
+C<sub>D</sub> = Drag coefficient<br>
+a = Local speed of sound
+</p>
+
+<div class="note">
+<strong>Advanced Challenge:</strong>
+Why does aerodynamic drag increase significantly
+when an aircraft approaches transonic speeds?
+</div>
+
+</div>
+
+<!-- SUBJECT 3 -->
+
+<div class="card">
+
+<span class="level">ADVANCED ENGINEERING • 03</span>
+
+<h3>3. Flight Mechanics, Stability and Control</h3>
+
+<p>
+Analyse aircraft motion in three-dimensional space.
+Learn how aerodynamic forces, aircraft mass, inertia
+and control systems determine flight behaviour.
+</p>
+
+<h4>Core Engineering Topics</h4>
+
+<ul>
+<li><strong>Aircraft Motion:</strong>
+Longitudinal, lateral and directional motion;
+roll, pitch and yaw.</li>
+
+<li><strong>Equations of Motion:</strong>
+Force balance, moment balance, acceleration,
+angular velocity and moments of inertia.</li>
+
+<li><strong>Static Stability:</strong>
+The tendency of an aircraft to return toward
+equilibrium after a disturbance.</li>
+
+<li><strong>Dynamic Stability:</strong>
+Oscillations, damping, phugoid motion
+and short-period motion.</li>
+
+<li><strong>Aircraft Control:</strong>
+Ailerons, elevators, rudders, control forces
+and control-system response.</li>
+
+<li><strong>Flight Performance:</strong>
+Take-off distance, landing distance, climb rate,
+maximum altitude, range and endurance.</li>
+
+<li><strong>Turning Flight:</strong>
+Bank angle, load factor, turn radius
+and coordinated manoeuvres.</li>
+
+<li><strong>Modern Flight Control:</strong>
+Autopilot, sensors, feedback systems,
+fly-by-wire and digital control laws.</li>
+</ul>
+
+<h4>Important Flight Mechanics Equations</h4>
+
+<div class="formula">
+Load Factor:
+<br>
+n = L / W
+<br><br>
+Turn Radius:
+<br>
+r = V² / (g tan φ)
+</div>
+
+<p>
+n = Load factor<br>
+L = Lift force<br>
+W = Aircraft weight<br>
+r = Turn radius<br>
+V = Aircraft speed<br>
+g = Gravitational acceleration<br>
+φ = Bank angle
+</p>
+
+<p>
+The turn-radius relationship applies to a coordinated,
+level turn under simplified conditions.
+</p>
+
+<div class="note">
+<strong>Advanced Challenge:</strong>
+How does the centre of gravity influence aircraft
+stability, handling and control?
+</div>
+
+</div>
+
+<!-- SUBJECT 4 -->
+
+<div class="card">
+
+<span class="level">ADVANCED ENGINEERING • 04</span>
+
+<h3>4. Aircraft Propulsion and Engine Performance</h3>
+
+<p>
+Explore how aircraft engines convert fuel energy
+into mechanical power and thrust. Study the relationship
+between thermodynamics, combustion, rotating machinery
+and propulsion efficiency.
+</p>
+
+<h4>Core Engineering Topics</h4>
+
+<ul>
+<li><strong>Piston Engines:</strong>
+Four-stroke cycles, cylinders, crankshafts,
+ignition systems and propeller power.</li>
+
+<li><strong>Gas Turbine Architecture:</strong>
+Air intake, compressor, combustion chamber,
+turbine and exhaust nozzle.</li>
+
+<li><strong>Engine Types:</strong>
+Turbojet, turbofan, turboprop and turboshaft
+engines and their applications.</li>
+
+<li><strong>Thermodynamic Cycles:</strong>
+Brayton cycle, compression, combustion,
+expansion and exhaust.</li>
+
+<li><strong>Thrust Generation:</strong>
+Mass flow, exhaust velocity, momentum change
+and pressure thrust.</li>
+
+<li><strong>Engine Performance:</strong>
+Thrust, power, thermal efficiency,
+propulsive efficiency and fuel consumption.</li>
+
+<li><strong>Advanced Technologies:</strong>
+High-bypass turbofans, geared turbofans,
+engine materials and emissions reduction.</li>
+
+<li><strong>Future Propulsion:</strong>
+Sustainable aviation fuels, hybrid-electric
+propulsion and hydrogen-powered concepts.</li>
+</ul>
+
+<h4>Fundamental Propulsion Equation</h4>
+
+<div class="formula">
+F ≈ ṁ (V<sub>e</sub> − V<sub>0</sub>)
+</div>
+
+<p>
+F = Simplified momentum thrust<br>
+ṁ = Mass flow rate<br>
+V<sub>e</sub> = Exhaust velocity<br>
+V<sub>0</sub> = Aircraft flight speed
+</p>
+
+<p>
+A complete engine calculation also considers
+pressure thrust and bypass flow where applicable.
+</p>
+
+<div class="note">
+<strong>Advanced Challenge:</strong>
+Why are high-bypass turbofan engines efficient
+for modern passenger aircraft?
+</div>
+
+</div>
+
+<h2>Important Engineering Formula</h2>
+
+<div class="card">
+
+<h3>The Aircraft Lift Equation</h3>
+
+<p>
+The lift equation estimates the aerodynamic
+force generated by an aircraft wing.
+</p>
+
+<div class="formula">
+L = ½ × ρ × V² × S × C<sub>L</sub>
+</div>
+
+<p>
+L = Lift force (Newtons)<br>
+ρ = Air density (kg/m³)<br>
+V = True airspeed (m/s)<br>
+S = Reference wing area (m²)<br>
+C<sub>L</sub> = Lift coefficient
+</p>
+
+<p>
+Lift varies with the square of airspeed when
+the other variables remain constant. The lift
+coefficient changes with angle of attack,
+airfoil geometry and flow conditions.
+</p>
+
+</div>
+
+<h2>Advanced Engineering Mission</h2>
+
+<div class="card">
+
+<h3>Aircraft Engineering Challenge</h3>
+
+<p>
+Choose a passenger aircraft and investigate
+how its wing structure, materials, aerodynamic
+design, flight-control surfaces and engines
+work together.
+</p>
+
+<p>
+Explain how these systems contribute to
+aircraft safety, stability and fuel efficiency.
+</p>
+
+</div>
+
+<a class="back" href="index.html">← Back to Home</a>
+
+</main>
+
+<footer>
+<p>© 2026 AEROSPARK | Explore Beyond.</p>
+<p>Aerospace Technology and Learning Platform</p>
+</footer>
 
 </body>
-  </html>
+    </html>
+      
