@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AeroAI | AEROSPARK</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #071326;
+  color: #eaf2ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #0d1d36;
+  padding: 17px 20px;
+  border-bottom: 1px solid #29415f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  color: #55c8ff;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+header a {
+  color: #dcecff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+main {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+  padding: 25px 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: center;
+  margin: 15px 0 25px;
+}
+
+.heading h1 {
+  color: #55c8ff;
+  font-size: 34px;
+}
+
+.heading p {
+  color: #aebfd5;
+  margin-top: 8px;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #173a38;
+  color: #76e5bb;
+  font-size: 12px;
+}
+
+.chat-box {
+  background: #10213b;
+  border: 1px solid #29415f;
+  border-radius: 15px;
+  min-height: 350px;
+  padding: 18px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 85%;
+  padding: 13px 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.bot {
+  background: #1a3556;
+  color: #eaf2ff;
+  margin-right: auto;
+}
+
+.user {
+  background: #087db9;
+  color: white;
+  margin-left: auto;
+}
+
+.suggestions {
+  margin: 20px 0;
+}
+
+.suggestions p {
+  color: #aebfd5;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.suggestion {
+  background: #172d4c;
+  border: 1px solid #345477;
+  color: #bfeaff;
+  border-radius: 20px;
+  padding: 9px 13px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.suggestion:hover {
+  background: #24476b;
+}
+
+.input-area {
+  display: flex;
+  gap: 9px;
+  background: #10213b;
+  padding: 10px;
+  border: 1px solid #345477;
+  border-radius: 13px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 10px 5px;
+}
+
+input::placeholder {
+  color: #91a6c0;
+}
+
+#send {
+  background: #168bd0;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 10px 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#send:hover {
+  background: #0872b2;
+}
+
+.note {
+  color: #8197b3;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  color: #8197b3;
+  background: #0d1d36;
+  font-size: 13px;
+}
+
+@media(max-width: 500px) {
+  .heading h1 {
+    font-size: 29px;
+  }
+
+  .chat-box {
+    min-height: 320px;
+  }
+
+  .message {
+    max-width: 94%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">AEROSPARK</div>
+  <a href="index.html">← Home</a>
+</header>
+
+<main>
+
+  <div class="heading">
+    <h1>🤖 AeroAI</h1>
+    <p>Your future companion for science and technology.</p>
+    <span class="status">● Chat interface ready</span>
+  </div>
+
+  <div class="chat-box" id="chatBox">
+    <div class="message bot">
+      <strong>🚀 AeroAI</strong><br><br>
+      Hello, Explorer! Welcome to AeroAI.
+      I'm your future aerospace learning assistant.
+      <br><br>
+      Ask me about rockets, aircraft, planets,
+      satellites, physics and mathematics.
+    </div>
+  </div>
+
+  <div class="suggestions">
+    <p>Try asking:</p>
+    <button class="suggestion" onclick="ask('How does a rocket fly?')">
+      🚀 How does a rocket fly?
+    </button>
+    <button class="suggestion" onclick="ask('What is gravity?')">
+      🌍 What is gravity?
+    </button>
+    <button class="suggestion" onclick="ask('How do airplanes fly?')">
+      ✈ How do airplanes fly?
+    </button>
+    <button class="suggestion" onclick="ask('Tell me about Mars.')">
+      🔴 Tell me about Mars
+    </button>
+  </div>
+
+  <div class="input-area">
+    <input
+      type="text"
+      id="userInput"
+      placeholder="Ask AeroAI anything..."
+      autocomplete="off"
+    >
+    <button id="send" onclick="sendMessage()">Send ➤</button>
+  </div>
+
+  <p class="note">
+    AeroAI preview: live AI connection will be added in a future step.
+  </p>
+
+</main>
+
+<footer>
+  © 2026 AEROSPARK | Explore Beyond. Calculate the Impossible.
+</footer>
+
+<script>
+const chatBox = document.getElementById("chatBox");
+const input = document.getElementById("userInput");
+
+function addMessage(text, type) {
+  const message = document.createElement("div");
+  message.className = "message " + type;
+  message.textContent = text;
+  chatBox.appendChild(message);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function sendMessage() {
+  const question = input.value.trim();
+
+  if (!question) return;
+
+  addMessage(question, "user");
+  input.value = "";
+
+  addMessage(
+    "Thanks for your question! The AeroAI chat interface is working. A real AI engine still needs to be connected before I can generate answers. 🚀",
+    "bot"
+  );
+}
+
+function ask(question) {
+  input.value = question;
+  sendMessage();
+}
+
+input.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
+});
+</script>
+
+</body>
+  </html>
+  
