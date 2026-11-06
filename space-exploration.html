@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore planets, galaxies, satellites, space missions and the universe with AEROSPARK.">
+<title>Space Exploration | AEROSPARK</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #071326;
+  color: #eaf2ff;
+  line-height: 1.7;
+}
+
+header {
+  background: #0d1d36;
+  padding: 18px 6%;
+  border-bottom: 1px solid #29415f;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  color: #55c8ff;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #55c8ff;
+}
+
+.hero {
+  text-align: center;
+  padding: 75px 20px;
+  background: linear-gradient(135deg, #172e59, #071326);
+}
+
+.hero h1 {
+  color: #55c8ff;
+  font-size: clamp(32px, 7vw, 52px);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #c4d5eb;
+  font-size: 17px;
+}
+
+.tagline {
+  color: #ffbd59;
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+main {
+  max-width: 1050px;
+  margin: auto;
+  padding: 35px 18px;
+}
+
+section {
+  margin-bottom: 30px;
+  background: #10213b;
+  padding: 25px;
+  border: 1px solid #29415f;
+  border-radius: 14px;
+}
+
+h2 {
+  color: #55c8ff;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+h3 {
+  color: #ffbd59;
+  margin: 15px 0 8px;
+}
+
+p {
+  color: #d2deee;
+  margin-bottom: 12px;
+}
+
+ul {
+  padding-left: 22px;
+  color: #d2deee;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.card {
+  background: #172d4c;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid #345477;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.highlight {
+  color: #55c8ff;
+  font-weight: bold;
+}
+
+.fact {
+  background: #071326;
+  color: #ffcf78;
+  padding: 17px;
+  border-radius: 9px;
+  margin-top: 15px;
+}
+
+.quiz {
+  background: #172d4c;
+  padding: 18px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+button {
+  background: #168bd0;
+  color: white;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 7px;
+  margin: 7px 5px 0 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0872b2;
+}
+
+#answer {
+  margin-top: 12px;
+  color: #ffcf78;
+  font-weight: bold;
+}
+
+.back-link {
+  display: inline-block;
+  color: #55c8ff;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  background: #0d1d36;
+  color: #9fb4ce;
+  border-top: 1px solid #29415f;
+}
+
+@media (max-width: 600px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0 6px;
+  }
+
+  .hero {
+    padding: 55px 18px;
+  }
+
+  section {
+    padding: 19px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">AEROSPARK</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="aeronautics.html">Aeronautics</a>
+      <a href="rocket-science.html">Rocket Science</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>🌍 Space Exploration</h1>
+  <p>
+    Discover planets, stars, galaxies, satellites and humanity's
+    greatest journeys beyond Earth.
+  </p>
+  <div class="tagline">Explore Beyond. Calculate the Impossible.</div>
+</div>
+
+<main>
+
+<section>
+  <h2>1. What Is Space Exploration?</h2>
+  <p>
+    Space exploration is the investigation of outer space using
+    satellites, telescopes, robotic spacecraft and human missions.
+  </p>
+  <p>
+    Scientists explore space to understand the universe, study
+    planets, discover new worlds and learn more about Earth's place
+    in the cosmos.
+  </p>
+  <div class="fact">
+    Space is full of stars, planets, galaxies, nebulae and many
+    objects that scientists are still discovering.
+  </div>
+</section>
+
+<section>
+  <h2>2. Our Solar System</h2>
+  <p>
+    Our solar system contains the Sun, eight planets, dwarf planets,
+    moons, asteroids and comets.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>☿ Mercury</h3>
+      <p>The smallest planet and the closest planet to the Sun.</p>
+    </div>
+    <div class="card">
+      <h3>♀ Venus</h3>
+      <p>A very hot planet with a thick atmosphere.</p>
+    </div>
+    <div class="card">
+      <h3>🌍 Earth</h3>
+      <p>Our home planet, known to support life.</p>
+    </div>
+    <div class="card">
+      <h3>♂ Mars</h3>
+      <p>The red planet, explored by several robotic missions.</p>
+    </div>
+    <div class="card">
+      <h3>♃ Jupiter</h3>
+      <p>The largest planet in our solar system.</p>
+    </div>
+    <div class="card">
+      <h3>♄ Saturn</h3>
+      <p>Famous for its spectacular ring system.</p>
+    </div>
+    <div class="card">
+      <h3>♅ Uranus</h3>
+      <p>An ice giant that rotates on a very tilted axis.</p>
+    </div>
+    <div class="card">
+      <h3>♆ Neptune</h3>
+      <p>A distant ice giant with extremely fast winds.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>3. Stars and Galaxies</h2>
+  <h3>What Is a Star?</h3>
+  <p>
+    A star is a massive, luminous ball of hot plasma that produces
+    energy through nuclear fusion. The Sun is the nearest star to Earth.
+  </p>
+
+  <h3>What Is a Galaxy?</h3>
+  <p>
+    A galaxy is a huge collection of stars, gas, dust and dark matter
+    held together by gravity.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Milky Way</h3>
+      <p>Our home galaxy, containing our solar system.</p>
+    </div>
+    <div class="card">
+      <h3>Andromeda</h3>
+      <p>A large galaxy that is relatively close to the Milky Way.</p>
+    </div>
+    <div class="card">
+      <h3>Nebulae</h3>
+      <p>Vast clouds of gas and dust found in space.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>4. Artificial Satellites</h2>
+  <p>
+    Artificial satellites are human-made objects placed into orbit
+    around Earth or another celestial body.
+  </p>
+
+  <h3>Uses of Satellites</h3>
+  <ul>
+    <li>Weather forecasting and climate monitoring.</li>
+    <li>Communication, television and internet services.</li>
+    <li>Navigation and positioning systems.</li>
+    <li>Earth observation and environmental research.</li>
+    <li>Scientific experiments and space exploration.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>5. Human Space Exploration</h2>
+  <p>
+    Humans have travelled beyond Earth to study space and conduct
+    scientific experiments.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>International Space Station</h3>
+      <p>
+        A research laboratory in low Earth orbit where astronauts
+        conduct experiments.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Apollo Moon Missions</h3>
+      <p>
+        NASA's Apollo programme achieved the first human Moon landing
+        in 1969.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Future Moon Missions</h3>
+      <p>
+        New missions aim to expand human exploration of the Moon.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>6. Famous Space Missions</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Voyager 1</h3>
+      <p>
+        A NASA spacecraft launched in 1977 that explored the outer
+        planets and entered interstellar space.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Hubble Space Telescope</h3>
+      <p>
+        A space telescope that has helped scientists study distant
+        galaxies and cosmic objects.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Chandrayaan-3</h3>
+      <p>
+        India's lunar mission that achieved a successful soft landing
+        near the Moon's south polar region in 2023.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Mangalyaan</h3>
+      <p>
+        India's Mars Orbiter Mission, which successfully entered
+        Mars orbit in 2014.
+      </p>
+    </div>
+    <div class="card">
+      <h3>James Webb Space Telescope</h3>
+      <p>
+        A powerful space observatory designed to study the early
+        universe, stars and exoplanets.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Aditya-L1</h3>
+      <p>
+        India's solar observatory mission, designed to study the Sun.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>7. How Do We Travel Through Space?</h2>
+  <p>
+    Spacecraft use rocket engines to gain the speed needed to travel
+    through space. Their journeys are carefully planned using
+    mathematics, physics and orbital mechanics.
+  </p>
+
+  <h3>Important Concepts</h3>
+  <ul>
+    <li><strong>Launch:</strong> A rocket lifts a spacecraft from a launch site.</li>
+    <li><strong>Orbit:</strong> The spacecraft follows a curved path around a celestial body.</li>
+    <li><strong>Gravity Assist:</strong> A spacecraft uses a planet's gravity and motion to change its speed and direction.</li>
+    <li><strong>Landing:</strong> A spacecraft reaches the surface of a planet, moon or other body.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>8. Important Space Science Formulas</h2>
+
+  <h3>Universal Gravitation</h3>
+  <div class="fact">
+    F = G × (m₁ × m₂) / r²
+  </div>
+  <p>
+    F = gravitational force, G = gravitational constant,
+    m₁ and m₂ = masses, and r = distance between their centres.
+  </p>
+
+  <h3>Orbital Speed for a Circular Orbit</h3>
+  <div class="fact">
+    v = √(GM / r)
+  </div>
+  <p>
+    v = orbital speed, G = gravitational constant,
+    M = mass of the central body, and r = orbital radius.
+  </p>
+
+  <h3>Light-Year</h3>
+  <div class="fact">
+    1 light-year ≈ 9.46 trillion kilometres
+  </div>
+  <p>
+    A light-year is the distance light travels in one year.
+    It is a unit of distance, not time.
+  </p>
+</section>
+
+<section>
+  <h2>9. Search for Life Beyond Earth</h2>
+  <p>
+    Scientists study Mars, icy moons and planets orbiting distant
+    stars to investigate whether environments suitable for life
+    may exist elsewhere.
+  </p>
+  <ul>
+    <li><strong>Exoplanets:</strong> Planets orbiting stars outside our solar system.</li>
+    <li><strong>Europa:</strong> A moon of Jupiter that may contain a subsurface ocean.</li>
+    <li><strong>Enceladus:</strong> A moon of Saturn with water-rich plumes.</li>
+    <li><strong>Mars:</strong> A planet studied for evidence of ancient water and possible past habitability.</li>
+  </ul>
+  <div class="fact">
+    Scientists have not yet confirmed life beyond Earth.
+  </div>
+</section>
+
+<section>
+  <h2>10. Test Your Space Knowledge</h2>
+  <div class="quiz">
+    <p><strong>Question:</strong> Which planet is known as the Red Planet?</p>
+
+    <button onclick="checkAnswer(false)">Venus</button>
+    <button onclick="checkAnswer(true)">Mars</button>
+    <button onclick="checkAnswer(false)">Jupiter</button>
+
+    <p id="answer"></p>
+  </div>
+</section>
+
+<section>
+  <h2>11. Continue Your Journey</h2>
+  <p>
+    Space exploration brings together astronomy, physics,
+    mathematics, engineering and imagination.
+  </p>
+  <p>
+    Keep learning and discover how humanity is exploring the universe.
+  </p>
+  <a class="back-link" href="index.html">← Back to AEROSPARK Home</a>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 AEROSPARK</p>
+  <p>Explore Beyond. Calculate the Impossible.</p>
+</footer>
+
+<script>
+function checkAnswer(correct) {
+  const result = document.getElementById("answer");
+
+  if (correct) {
+    result.textContent = "Correct! Mars is known as the Red Planet. 🌍";
+  } else {
+    result.textContent = "Try again! Think of the planet with a reddish surface.";
+  }
+}
+</script>
+
+</body>
+</html>
