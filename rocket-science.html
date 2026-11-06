@@ -1,104 +1,216 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore rocket science, propulsion, rocket stages, and spaceflight with AEROSPARK.">
   <title>Rocket Science | AEROSPARK</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: Arial, sans-serif;
-      background: #07111f;
-      color: #ffffff;
+      background: #071326;
+      color: #eaf2ff;
       line-height: 1.7;
     }
 
     header {
-      padding: 22px;
-      text-align: center;
-      background: #101f35;
-      border-bottom: 2px solid #20bfff;
-    }
-
-    header h1 {
-      color: #20bfff;
-      font-size: 30px;
+      background: #0d1d36;
+      padding: 18px 6%;
+      border-bottom: 1px solid #243c60;
     }
 
     nav {
-      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo {
+      color: #55c8ff;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
     }
 
     nav a {
-      color: white;
+      color: #eaf2ff;
       text-decoration: none;
-      margin: 8px;
-      display: inline-block;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #55c8ff;
     }
 
     .hero {
       text-align: center;
       padding: 75px 20px;
-      background: linear-gradient(135deg, #102d50, #07111f);
+      background: linear-gradient(135deg, #102c50, #071326);
     }
 
-    .hero h2 {
-      font-size: 38px;
-      color: #20bfff;
+    .hero h1 {
+      font-size: clamp(32px, 7vw, 52px);
+      color: #55c8ff;
       margin-bottom: 15px;
     }
 
     .hero p {
-      max-width: 650px;
+      max-width: 700px;
       margin: auto;
+      color: #c4d5eb;
+      font-size: 17px;
     }
 
-    .content {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-
-    .topic {
-      background: #12243a;
-      padding: 22px;
-      margin: 20px 0;
-      border-radius: 12px;
-      border: 1px solid #254665;
-    }
-
-    .topic h3 {
-      color: #20bfff;
-      margin-bottom: 10px;
-    }
-
-    .topic ul {
-      padding-left: 22px;
-    }
-
-    .back {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #20bfff;
-      color: #07111f;
-      border-radius: 7px;
-      text-decoration: none;
+    .tagline {
+      color: #ffbd59;
+      margin-top: 18px;
       font-weight: bold;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 35px 18px;
+    }
+
+    section {
+      margin-bottom: 35px;
+      background: #10213b;
+      padding: 25px;
+      border: 1px solid #233d60;
+      border-radius: 14px;
+    }
+
+    h2 {
+      color: #55c8ff;
+      margin-bottom: 15px;
+      font-size: 25px;
+    }
+
+    h3 {
+      color: #ffbd59;
+      margin: 18px 0 8px;
+    }
+
+    p {
+      color: #d2deee;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 22px;
+      color: #d2deee;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .formula {
+      background: #071326;
+      color: #ffcf78;
+      padding: 17px;
+      border-radius: 9px;
+      margin: 15px 0;
+      text-align: center;
+      font-size: 19px;
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: #172d4c;
+      padding: 18px;
+      border-radius: 10px;
+      border: 1px solid #345477;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .highlight {
+      color: #55c8ff;
+      font-weight: bold;
+    }
+
+    .quiz {
+      background: #172d4c;
+      padding: 18px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    button {
+      background: #168bd0;
+      color: white;
+      border: none;
+      padding: 11px 18px;
+      border-radius: 7px;
+      margin: 8px 5px 0 0;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0872b2;
+    }
+
+    #answer {
+      margin-top: 12px;
+      font-weight: bold;
+      color: #ffcf78;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: #55c8ff;
+      text-decoration: none;
+      margin-top: 10px;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      background: #101f35;
-      color: #b9c9d9;
-      margin-top: 30px;
+      padding: 25px 15px;
+      background: #0d1d36;
+      color: #9fb4ce;
+      border-top: 1px solid #243c60;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+
+      section {
+        padding: 19px;
+      }
     }
   </style>
 </head>
@@ -106,103 +218,231 @@
 <body>
 
   <header>
-    <h1>AEROSPARK</h1>
-    <p>Explore Beyond. Calculate the Impossible.</p>
-
     <nav>
-      <a href="index.html">Home</a>
-      <a href="aeronautics.html">Aeronautics</a>
+      <div class="logo">AEROSPARK</div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="aeronautics.html">Aeronautics</a>
+        <a href="rocket-science.html">Rocket Science</a>
+      </div>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>🚀 Rocket Science</h2>
+  <div class="hero">
+    <h1>🚀 Rocket Science</h1>
     <p>
-      Discover the science and engineering behind rockets,
-      propulsion systems, spacecraft and space exploration.
+      Discover how rockets work, how they generate thrust,
+      and how humans travel beyond Earth's atmosphere.
     </p>
-  </section>
+    <div class="tagline">Explore Beyond. Calculate the Impossible.</div>
+  </div>
 
-  <main class="content">
+  <main>
 
-    <section class="topic">
-      <h3>1. Introduction to Rocket Science</h3>
+    <section>
+      <h2>1. What Is Rocket Science?</h2>
       <p>
-        Rocket science is the study of designing, building and
-        operating vehicles that travel through space using
-        rocket propulsion.
+        Rocket science is the study of rockets, propulsion,
+        spacecraft motion, and spaceflight. It combines physics,
+        mathematics, engineering, and computer science.
+      </p>
+      <p>
+        Rockets are powerful vehicles that carry people, satellites,
+        scientific instruments, and spacecraft into space.
       </p>
     </section>
 
-    <section class="topic">
-      <h3>2. Rocket Propulsion</h3>
+    <section>
+      <h2>2. How Does a Rocket Work?</h2>
       <p>
-        Rockets generate thrust by expelling high-speed gas
-        through a nozzle. This works according to Newton's
-        third law of motion.
+        A rocket works using <span class="highlight">Newton's Third Law of Motion</span>:
+        for every action, there is an equal and opposite reaction.
       </p>
+      <p>
+        A rocket pushes hot gases downward through its engine nozzle.
+        The escaping gases create an upward force called thrust.
+      </p>
+      <div class="formula">
+        Action = Reaction
+      </div>
+      <p>
+        Rockets carry both fuel and oxidizer, so they can operate
+        even in the vacuum of space.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Main Parts of a Rocket</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>🚀 Nose Cone</h3>
+          <p>Reduces aerodynamic drag and protects the payload.</p>
+        </div>
+        <div class="card">
+          <h3>Payload</h3>
+          <p>Carries satellites, scientific equipment, or astronauts.</p>
+        </div>
+        <div class="card">
+          <h3>Fuel Tank</h3>
+          <p>Stores the propellant needed for rocket propulsion.</p>
+        </div>
+        <div class="card">
+          <h3>Rocket Engine</h3>
+          <p>Produces hot exhaust gases to generate thrust.</p>
+        </div>
+        <div class="card">
+          <h3>Guidance System</h3>
+          <p>Helps control the rocket's direction and flight path.</p>
+        </div>
+        <div class="card">
+          <h3>Stages</h3>
+          <p>Allow empty tanks and engines to be discarded during flight.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Rocket Propulsion</h2>
+      <p>
+        Rocket propulsion is the process of producing thrust by
+        expelling high-speed exhaust gases.
+      </p>
+
+      <h3>Types of Rocket Engines</h3>
       <ul>
-        <li>Solid rocket motors</li>
-        <li>Liquid rocket engines</li>
-        <li>Hybrid rocket engines</li>
-        <li>Electric propulsion systems</li>
+        <li><strong>Liquid Rocket:</strong> Uses liquid fuel and liquid oxidizer.</li>
+        <li><strong>Solid Rocket:</strong> Uses solid propellant.</li>
+        <li><strong>Hybrid Rocket:</strong> Combines solid and liquid or gaseous propellants.</li>
+        <li><strong>Electric Propulsion:</strong> Uses electrical energy to accelerate propellant, usually for spacecraft.</li>
       </ul>
     </section>
 
-    <section class="topic">
-      <h3>3. Important Rocket Components</h3>
-      <ul>
-        <li>Combustion chamber</li>
-        <li>Rocket nozzle</li>
-        <li>Propellant tanks</li>
-        <li>Guidance and navigation systems</li>
-        <li>Payload section</li>
-        <li>Structural body</li>
-      </ul>
+    <section>
+      <h2>5. Rocket Staging</h2>
+      <p>
+        Large rockets often use multiple stages. When a stage runs
+        out of propellant, it separates from the rocket. This reduces
+        mass and helps the remaining rocket continue accelerating.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <h3>First Stage</h3>
+          <p>Provides powerful thrust during the initial launch.</p>
+        </div>
+        <div class="card">
+          <h3>Second Stage</h3>
+          <p>Continues accelerating the vehicle after separation.</p>
+        </div>
+        <div class="card">
+          <h3>Upper Stage</h3>
+          <p>Can place payloads into their intended orbits.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="topic">
-      <h3>4. Important Rocket Equations</h3>
-      <p><strong>Newton's Second Law:</strong></p>
-      <p>F = ma</p>
+    <section>
+      <h2>6. Important Rocket Science Formulas</h2>
 
-      <p><strong>Thrust equation (simplified):</strong></p>
-      <p>F = ṁVe + (Pe − Pa)Ae</p>
-
+      <h3>Thrust Equation</h3>
+      <div class="formula">
+        F = ṁ × Ve + (Pe − Pa) × Ae
+      </div>
       <p>
-        Here, ṁ is the propellant mass flow rate,
-        Ve is exhaust velocity, and the pressure and area
-        terms describe the nozzle's pressure contribution.
+        F = thrust, ṁ = mass flow rate, Ve = exhaust velocity,
+        Pe = exit pressure, Pa = ambient pressure, and Ae = nozzle exit area.
+      </p>
+
+      <h3>Newton's Second Law</h3>
+      <div class="formula">
+        F = m × a
+      </div>
+      <p>Force equals mass multiplied by acceleration.</p>
+
+      <h3>Tsiolkovsky Rocket Equation</h3>
+      <div class="formula">
+        Δv = Ve × ln(m₀ / mf)
+      </div>
+      <p>
+        Δv = change in velocity, Ve = effective exhaust velocity,
+        m₀ = initial mass, and mf = final mass.
       </p>
     </section>
 
-    <section class="topic">
-      <h3>5. Stages of a Rocket Launch</h3>
+    <section>
+      <h2>7. Understanding Space Orbits</h2>
+      <p>
+        An orbit is the curved path followed by an object around
+        another object due to gravity and its forward motion.
+      </p>
       <ul>
-        <li>Pre-launch preparation</li>
-        <li>Ignition and liftoff</li>
-        <li>Powered ascent</li>
-        <li>Stage separation</li>
-        <li>Payload deployment</li>
+        <li><strong>Low Earth Orbit (LEO):</strong> Used by many Earth-observation satellites and the International Space Station.</li>
+        <li><strong>Geostationary Orbit (GEO):</strong> A high orbit where a satellite appears fixed above one point on Earth's equator.</li>
+        <li><strong>Polar Orbit:</strong> Passes over or near Earth's poles.</li>
+        <li><strong>Escape Trajectory:</strong> A path that allows a spacecraft to leave Earth's gravitational influence.</li>
       </ul>
     </section>
 
-    <section class="topic">
-      <h3>6. Space Exploration</h3>
-      <p>
-        Rocket technology makes it possible to launch satellites,
-        send scientific spacecraft to other planets and carry
-        astronauts into space.
-      </p>
+    <section>
+      <h2>8. Famous Space Launch Vehicles</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Saturn V</h3>
+          <p>The historic NASA rocket that carried astronauts to the Moon.</p>
+        </div>
+        <div class="card">
+          <h3>Falcon 9</h3>
+          <p>A partially reusable orbital launch vehicle developed by SpaceX.</p>
+        </div>
+        <div class="card">
+          <h3>LVM3</h3>
+          <p>India's heavy-lift launch vehicle developed by ISRO.</p>
+        </div>
+        <div class="card">
+          <h3>PSLV</h3>
+          <p>India's versatile launch vehicle used for many satellite missions.</p>
+        </div>
+      </div>
     </section>
 
-    <a class="back" href="index.html">← Back to Home</a>
+    <section>
+      <h2>9. Test Your Rocket Science Knowledge</h2>
+      <div class="quiz">
+        <p><strong>Question:</strong> What law explains the basic working principle of a rocket?</p>
+        <button onclick="checkAnswer(false)">Newton's First Law</button>
+        <button onclick="checkAnswer(true)">Newton's Third Law</button>
+        <button onclick="checkAnswer(false)">Newton's Law of Gravitation</button>
+        <p id="answer"></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>10. Keep Exploring</h2>
+      <p>
+        Rocket science is only the beginning. Continue learning about
+        aircraft, spacecraft, satellites, propulsion, and the universe.
+      </p>
+      <a class="back-link" href="index.html">← Back to AEROSPARK Home</a>
+    </section>
 
   </main>
 
   <footer>
     <p>© 2026 AEROSPARK | Explore Beyond. Calculate the Impossible.</p>
+    <p>Made for curious minds and future aerospace engineers.</p>
   </footer>
+
+  <script>
+    function checkAnswer(correct) {
+      const result = document.getElementById("answer");
+
+      if (correct) {
+        result.textContent = "Correct! Newton's Third Law explains rocket propulsion. 🚀";
+      } else {
+        result.textContent = "Not quite. Try again! Think about action and reaction.";
+      }
+    }
+  </script>
 
 </body>
   </html>
+  
