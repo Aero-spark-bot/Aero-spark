@@ -2,447 +2,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore rocket science, propulsion, rocket stages, and spaceflight with AEROSPARK.">
-  <title>Rocket Science | AEROSPARK</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #071326;
-      color: #eaf2ff;
-      line-height: 1.7;
-    }
-
-    header {
-      background: #0d1d36;
-      padding: 18px 6%;
-      border-bottom: 1px solid #243c60;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .logo {
-      color: #55c8ff;
-      font-size: 25px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    nav a {
-      color: #eaf2ff;
-      text-decoration: none;
-      margin-left: 15px;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #55c8ff;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 75px 20px;
-      background: linear-gradient(135deg, #102c50, #071326);
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 7vw, 52px);
-      color: #55c8ff;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      color: #c4d5eb;
-      font-size: 17px;
-    }
-
-    .tagline {
-      color: #ffbd59;
-      margin-top: 18px;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 1050px;
-      margin: auto;
-      padding: 35px 18px;
-    }
-
-    section {
-      margin-bottom: 35px;
-      background: #10213b;
-      padding: 25px;
-      border: 1px solid #233d60;
-      border-radius: 14px;
-    }
-
-    h2 {
-      color: #55c8ff;
-      margin-bottom: 15px;
-      font-size: 25px;
-    }
-
-    h3 {
-      color: #ffbd59;
-      margin: 18px 0 8px;
-    }
-
-    p {
-      color: #d2deee;
-      margin-bottom: 12px;
-    }
-
-    ul {
-      padding-left: 22px;
-      color: #d2deee;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .formula {
-      background: #071326;
-      color: #ffcf78;
-      padding: 17px;
-      border-radius: 9px;
-      margin: 15px 0;
-      text-align: center;
-      font-size: 19px;
-      font-weight: bold;
-      overflow-wrap: anywhere;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 18px;
-    }
-
-    .card {
-      background: #172d4c;
-      padding: 18px;
-      border-radius: 10px;
-      border: 1px solid #345477;
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
-    .highlight {
-      color: #55c8ff;
-      font-weight: bold;
-    }
-
-    .quiz {
-      background: #172d4c;
-      padding: 18px;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-
-    button {
-      background: #168bd0;
-      color: white;
-      border: none;
-      padding: 11px 18px;
-      border-radius: 7px;
-      margin: 8px 5px 0 0;
-      font-size: 15px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0872b2;
-    }
-
-    #answer {
-      margin-top: 12px;
-      font-weight: bold;
-      color: #ffcf78;
-    }
-
-    .back-link {
-      display: inline-block;
-      color: #55c8ff;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px 15px;
-      background: #0d1d36;
-      color: #9fb4ce;
-      border-top: 1px solid #243c60;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        justify-content: center;
-      }
-
-      nav a {
-        margin: 0 7px;
-      }
-
-      .hero {
-        padding: 55px 18px;
-      }
-
-      section {
-        padding: 19px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocket Science | AEROSPARK</title>
+<style>
+:root {
+  --bg:#071426;
+  --panel:#102641;
+  --gold:#ffd166;
+  --cyan:#5ed8ed;
+  --text:#edf5ff;
+  --muted:#b4c6da;
+  --line:#294765;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#071426,#0b1d34,#071426);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+a{color:var(--cyan)}
+.topbar{
+  position:sticky;top:0;z-index:10;
+  display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;padding:14px 18px;
+  background:#071426ee;border-bottom:1px solid var(--line);
+}
+.brand{color:var(--gold);font-weight:bold;letter-spacing:2px}
+.topbar a{text-decoration:none}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav a{font-size:13px}
+.hero{
+  text-align:center;padding:65px 18px;
+  background:radial-gradient(ellipse at top,#17456b,transparent 70%);
+}
+.hero h1{font-size:clamp(38px,8vw,68px);margin:10px 0;color:white}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:760px;margin:auto;color:var(--muted)}
+.kicker{color:var(--cyan);letter-spacing:3px;font-weight:bold;font-size:12px}
+.container{max-width:1150px;margin:auto;padding:25px 16px 60px}
+.layout{display:grid;grid-template-columns:230px 1fr;gap:20px}
+.sidebar{
+  position:sticky;top:80px;align-self:start;
+  max-height:85vh;overflow:auto;
+  background:#0d2037;border:1px solid var(--line);
+  border-radius:14px;padding:15px;
+}
+.sidebar a{display:block;padding:6px;text-decoration:none;font-size:13px}
+.sidebar h3{color:var(--gold)}
+.chapter{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:16px;padding:22px;margin-bottom:18px;
+}
+.chapter h2{color:var(--gold);margin-top:0}
+.chapter h3{color:var(--cyan);margin-top:24px}
+.chapter p,.chapter li{color:#d1deed}
+.tag{color:var(--cyan);font-size:12px;letter-spacing:2px;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:#0b1d32;border:1px solid var(--line);border-radius:12px;padding:14px}
+.card h4{color:var(--gold);margin:0 0 8px}
+.card p{margin:0;font-size:14px}
+.formula{
+  padding:14px;background:#071827;border-left:3px solid var(--gold);
+  border-radius:8px;font-family:monospace;font-size:16px;
+  overflow-wrap:anywhere;
+}
+.diagram{
+  text-align:center;background:#071827;padding:18px;
+  border:1px solid var(--line);border-radius:12px;margin:18px 0;
+}
+.diagram svg{max-width:100%;height:auto}
+.caption{font-size:12px;color:var(--muted)}
+.callout{padding:15px;border:1px solid #806b36;background:#2b2515;border-radius:12px;margin:15px 0}
+table{width:100%;border-collapse:collapse;margin:15px 0;font-size:14px}
+td,th{padding:10px;border:1px solid var(--line);text-align:left}
+th{color:var(--gold);background:#1b3856}
+details{background:#0b1d32;border:1px solid var(--line);padding:12px;border-radius:10px;margin:10px 0}
+summary{cursor:pointer;color:var(--cyan);font-weight:bold}
+input{width:100%;padding:12px;margin-top:5px;background:#071827;color:white;border:1px solid var(--line);border-radius:8px}
+button{background:var(--gold);color:#17202b;border:0;border-radius:9px;padding:12px 18px;font-weight:bold;cursor:pointer}
+.result{color:#77e0ad;padding:12px;background:#071827;border-radius:8px;margin-top:10px}
+.quiz button{display:block;width:100%;text-align:left;margin:8px 0;background:#1a3552;color:white;border:1px solid var(--line)}
+footer{text-align:center;color:var(--muted);padding:25px;border-top:1px solid var(--line)}
+@media(max-width:800px){
+ .layout{grid-template-columns:1fr}
+ .sidebar{position:relative;top:auto;max-height:none}
+ .sidebar nav{display:grid;grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+</style>
 </head>
-
 <body>
 
-  <header>
-    <nav>
-      <div class="logo">AEROSPARK</div>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="aeronautics.html">Aeronautics</a>
-        <a href="rocket-science.html">Rocket Science</a>
-      </div>
-    </nav>
-  </header>
+<header class="topbar">
+  <a class="brand" href="index.html">AEROSPARK</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="aeronautics.html">Aeronautics</a>
+    <a href="space-exploration.html">Space Exploration</a>
+  </nav>
+</header>
 
-  <div class="hero">
-    <h1>🚀 Rocket Science</h1>
-    <p>
-      Discover how rockets work, how they generate thrust,
-      and how humans travel beyond Earth's atmosphere.
-    </p>
-    <div class="tagline">Explore Beyond. Calculate the Impossible.</div>
-  </div>
+<section class="hero">
+  <div class="kicker">AEROSPACE ENGINEERING KNOWLEDGE CENTRE</div>
+  <h1>ROCKET <span>SCIENCE</span></h1>
+  <p>Explore rocket structures, aerodynamics, propulsion theory, flight mechanics, orbital science, materials engineering and space mission design.</p>
+</section>
 
-  <main>
+<main class="container">
+<div class="layout">
 
-    <section>
-      <h2>1. What Is Rocket Science?</h2>
-      <p>
-        Rocket science is the study of rockets, propulsion,
-        spacecraft motion, and spaceflight. It combines physics,
-        mathematics, engineering, and computer science.
-      </p>
-      <p>
-        Rockets are powerful vehicles that carry people, satellites,
-        scientific instruments, and spacecraft into space.
-      </p>
-    </section>
+<aside class="sidebar">
+<h3>COURSE CONTENTS</h3>
+<nav>
+<a href="#intro">01 · Foundations</a>
+<a href="#anatomy">02 · Rocket Anatomy</a>
+<a href="#structure">03 · Body Structures</a>
+<a href="#aero">04 · Aerodynamics</a>
+<a href="#propulsion">05 · Propulsion</a>
+<a href="#engines">06 · Engine Systems</a>
+<a href="#staging">07 · Staging</a>
+<a href="#flight">08 · Flight Mechanics</a>
+<a href="#orbit">09 · Orbital Mechanics</a>
+<a href="#gnc">10 · Guidance and Control</a>
+<a href="#materials">11 · Materials</a>
+<a href="#thermal">12 · Thermal Engineering</a>
+<a href="#missions">13 · Mission Design</a>
+<a href="#math">14 · Mathematics Lab</a>
+<a href="#quiz">15 · Knowledge Quiz</a>
+</nav>
+</aside>
 
-    <section>
-      <h2>2. How Does a Rocket Work?</h2>
-      <p>
-        A rocket works using <span class="highlight">Newton's Third Law of Motion</span>:
-        for every action, there is an equal and opposite reaction.
-      </p>
-      <p>
-        A rocket pushes hot gases downward through its engine nozzle.
-        The escaping gases create an upward force called thrust.
-      </p>
-      <div class="formula">
-        Action = Reaction
-      </div>
-      <p>
-        Rockets carry both fuel and oxidizer, so they can operate
-        even in the vacuum of space.
-      </p>
-    </section>
+<div>
 
-    <section>
-      <h2>3. Main Parts of a Rocket</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>🚀 Nose Cone</h3>
-          <p>Reduces aerodynamic drag and protects the payload.</p>
-        </div>
-        <div class="card">
-          <h3>Payload</h3>
-          <p>Carries satellites, scientific equipment, or astronauts.</p>
-        </div>
-        <div class="card">
-          <h3>Fuel Tank</h3>
-          <p>Stores the propellant needed for rocket propulsion.</p>
-        </div>
-        <div class="card">
-          <h3>Rocket Engine</h3>
-          <p>Produces hot exhaust gases to generate thrust.</p>
-        </div>
-        <div class="card">
-          <h3>Guidance System</h3>
-          <p>Helps control the rocket's direction and flight path.</p>
-        </div>
-        <div class="card">
-          <h3>Stages</h3>
-          <p>Allow empty tanks and engines to be discarded during flight.</p>
-        </div>
-      </div>
-    </section>
+<section class="chapter" id="intro">
+<span class="tag">MODULE 01 · FOUNDATIONS</span>
+<h2>Introduction to Rocket Science</h2>
+<p>Rocket science is an interdisciplinary field combining physics, mathematics, thermodynamics, fluid mechanics, materials science, electronics and systems engineering.</p>
+<h3>Newton's laws of motion</h3>
+<div class="grid">
+<div class="card"><h4>First law — Inertia</h4><p>An object maintains its state of motion unless acted upon by a net external force.</p></div>
+<div class="card"><h4>Second law — Dynamics</h4><p>Net force changes momentum. For constant mass, the familiar relation is F = ma.</p></div>
+<div class="card"><h4>Third law — Interaction</h4><p>Forces occur in equal and opposite pairs. A rocket accelerates exhaust in one direction and experiences an opposing force.</p></div>
+<div class="card"><h4>Momentum conservation</h4><p>The total momentum of an isolated system remains constant.</p></div>
+</div>
+<h3>Why rockets work in space</h3>
+<p>A rocket does not need to push against air. It carries reaction mass and changes its momentum by expelling that mass. This is why rocket propulsion works in a vacuum.</p>
+</section>
 
-    <section>
-      <h2>4. Rocket Propulsion</h2>
-      <p>
-        Rocket propulsion is the process of producing thrust by
-        expelling high-speed exhaust gases.
-      </p>
+<section class="chapter" id="anatomy">
+<span class="tag">MODULE 02 · VEHICLE ARCHITECTURE</span>
+<h2>Rocket Anatomy: Every Major Section</h2>
+<p>A launch vehicle is an integrated structure. Each section has a role in carrying payloads, supporting flight loads and enabling the mission.</p>
+<div class="diagram">
+<svg viewBox="0 0 300 500" width="300" role="img" aria-label="Simplified labelled rocket diagram">
+<defs><linearGradient id="body" x1="0" x2="1"><stop stop-color="#6686a4"/><stop offset=".5" stop-color="#e2edf7"/><stop offset="1" stop-color="#55718e"/></linearGradient></defs>
+<path d="M150 15 Q112 55 112 110 L112 180 L188 180 L188 110 Q188 55 150 15Z" fill="url(#body)" stroke="#5ed8ed" stroke-width="2"/>
+<rect x="112" y="180" width="76" height="90" fill="#9bb4c9" stroke="#5ed8ed"/>
+<rect x="112" y="274" width="76" height="100" fill="#708da8" stroke="#5ed8ed"/>
+<rect x="106" y="377" width="88" height="16" fill="#e4b94f"/>
+<path d="M112 393 L188 393 L202 455 L98 455Z" fill="#7895b0" stroke="#5ed8ed"/>
+<path d="M132 455 L168 455 L159 480 L141 480Z" fill="#e4b94f"/>
+<g stroke="#b9d0e5" fill="none"><path d="M112 75 H20"/><path d="M188 210 H280"/><path d="M188 320 H280"/><path d="M194 385 H280"/><path d="M132 460 H20"/></g>
+<g fill="#fff" font-size="10"><text x="4" y="69">Nose fairing</text><text x="204" y="204">Payload bay</text><text x="204" y="314">Body / stage</text><text x="204" y="379">Interstage</text><text x="3" y="454">Engine section*</text></g>
+</svg>
+<p class="caption">Simplified educational illustration. Actual rocket layouts vary.</p>
+</div>
+<div class="grid">
+<div class="card"><h4>1. Nose Cone / Payload Fairing</h4><p>Shapes the forward part of the vehicle and protects payloads from aerodynamic pressure, acoustic loads and the flight environment.</p></div>
+<div class="card"><h4>2. Payload Bay</h4><p>Contains the satellite, scientific instrument, probe or crew spacecraft. Interfaces provide structural support and electrical connections.</p></div>
+<div class="card"><h4>3. Main Body Structure</h4><p>The load-bearing framework transfers forces between the vehicle's sections. It can contain shells, frames, rings and stiffeners.</p></div>
+<div class="card"><h4>4. Tank Regions</h4><p>Many chemical launch vehicles contain large tanks. Their engineering involves pressure, structural stability, thermal conditions and mass.</p></div>
+<div class="card"><h4>5. Interstage</h4><p>Connects stages and transfers loads between them. It forms part of the vehicle's structural architecture.</p></div>
+<div class="card"><h4>6. Avionics Section</h4><p>Contains computers, sensors, navigation electronics, communications equipment and electrical power systems.</p></div>
+<div class="card"><h4>7. Propulsion Section</h4><p>Integrates propulsion-related equipment with the vehicle's aft structural region.</p></div>
+<div class="card"><h4>8. Flight Interfaces</h4><p>Connect structural, electrical, data and thermal systems across vehicle sections.</p></div>
+</div>
+</section>
 
-      <h3>Types of Rocket Engines</h3>
-      <ul>
-        <li><strong>Liquid Rocket:</strong> Uses liquid fuel and liquid oxidizer.</li>
-        <li><strong>Solid Rocket:</strong> Uses solid propellant.</li>
-        <li><strong>Hybrid Rocket:</strong> Combines solid and liquid or gaseous propellants.</li>
-        <li><strong>Electric Propulsion:</strong> Uses electrical energy to accelerate propellant, usually for spacecraft.</li>
-      </ul>
-    </section>
+<section class="chapter" id="structure">
+<span class="tag">MODULE 03 · STRUCTURAL ENGINEERING</span>
+<h2>Rocket Body Design and Structures</h2>
+<p>Rocket structures must be lightweight while supporting substantial mechanical and environmental loads. Structural engineering balances strength, stiffness, mass, reliability and manufacturability.</p>
+<h3>Common structural concepts</h3>
+<table>
+<tr><th>Structure</th><th>Purpose</th></tr>
+<tr><td>Thin-walled shell</td><td>Distributes loads around a cylindrical body.</td></tr>
+<tr><td>Frames and rings</td><td>Help preserve cross-sectional shape and transfer concentrated loads.</td></tr>
+<tr><td>Longitudinal stiffeners</td><td>Improve resistance to bending and local instability.</td></tr>
+<tr><td>Sandwich panels</td><td>Use separated face sheets and a lightweight core to improve bending stiffness.</td></tr>
+<tr><td>Structural joints</td><td>Transfer forces between major vehicle sections.</td></tr>
+</table>
+<h3>Body geometry</h3>
+<p>Cylindrical bodies package volume efficiently and can distribute internal pressure loads. Conical and curved forebody shapes are studied for aerodynamic performance. Designers balance drag, volume, structural mass and manufacturing complexity.</p>
+<h3>Structural loads</h3>
+<ul>
+<li>Axial acceleration and compression.</li>
+<li>Bending caused by aerodynamic forces.</li>
+<li>Vibration and acoustic environments.</li>
+<li>Stress concentrations near openings and attachments.</li>
+<li>Thermal expansion and contraction.</li>
+<li>Local and global buckling behaviour.</li>
+</ul>
+<div class="callout"><b>Engineering note:</b> These are educational structural concepts, not dimensions or instructions for constructing a flight vehicle.</div>
+</section>
 
-    <section>
-      <h2>5. Rocket Staging</h2>
-      <p>
-        Large rockets often use multiple stages. When a stage runs
-        out of propellant, it separates from the rocket. This reduces
-        mass and helps the remaining rocket continue accelerating.
-      </p>
-      <div class="cards">
-        <div class="card">
-          <h3>First Stage</h3>
-          <p>Provides powerful thrust during the initial launch.</p>
-        </div>
-        <div class="card">
-          <h3>Second Stage</h3>
-          <p>Continues accelerating the vehicle after separation.</p>
-        </div>
-        <div class="card">
-          <h3>Upper Stage</h3>
-          <p>Can place payloads into their intended orbits.</p>
-        </div>
-      </div>
-    </section>
+<section class="chapter" id="aero">
+<span class="tag">MODULE 04 · FLUID MECHANICS</span>
+<h2>Rocket Aerodynamics</h2>
+<p>During atmospheric flight, a rocket interacts with air. Aerodynamic forces depend on speed, air density, vehicle geometry, orientation and the flow regime.</p>
+<div class="grid">
+<div class="card"><h4>Drag</h4><p>Force opposing motion relative to the surrounding fluid.</p></div>
+<div class="card"><h4>Lift and side force</h4><p>Forces perpendicular to the relative airflow.</p></div>
+<div class="card"><h4>Mach number</h4><p>The ratio of vehicle speed to the local speed of sound.</p></div>
+<div class="card"><h4>Boundary layer</h4><p>The region near a surface where viscosity strongly affects airflow velocity.</p></div>
+</div>
+<h3>Dynamic pressure</h3>
+<div class="formula">q = ½ ρV²</div>
+<p>Here, ρ is air density and V is speed relative to the air. Dynamic pressure is a useful measure of aerodynamic loading.</p>
+<h3>Drag equation</h3>
+<div class="formula">D = ½ ρV² C<sub>D</sub>A</div>
+<p>C<sub>D</sub> is the drag coefficient and A is the reference area. The coefficient depends on shape, angle of attack, Reynolds number and Mach number.</p>
+<h3>Flow regimes</h3>
+<ul>
+<li><b>Subsonic:</b> flow is generally below the local speed of sound.</li>
+<li><b>Transonic:</b> subsonic and locally supersonic regions can coexist.</li>
+<li><b>Supersonic:</b> shock waves and expansion fans become important.</li>
+<li><b>Hypersonic:</b> very high-speed flow can produce strong thermal and chemical effects.</li>
+</ul>
+</section>
 
-    <section>
-      <h2>6. Important Rocket Science Formulas</h2>
+<section class="chapter" id="propulsion">
+<span class="tag">MODULE 05 · PROPULSION THEORY</span>
+<h2>Rocket Propulsion Principles</h2>
+<p>Propulsion systems create force by changing momentum. Different technologies use different energy sources and have different performance characteristics.</p>
+<h3>Thrust relationship</h3>
+<div class="formula">F ≈ ṁV<sub>e</sub> + (p<sub>e</sub> − p<sub>a</sub>)A<sub>e</sub></div>
+<p>Here, ṁ is exhaust mass flow rate, V<sub>e</sub> is exhaust speed, p<sub>e</sub> is exit pressure, p<sub>a</sub> is ambient pressure and A<sub>e</sub> is exit area. This is a simplified steady-flow relationship.</p>
+<h3>Specific impulse</h3>
+<div class="formula">I<sub>sp</sub> = F / (ṁg₀)</div>
+<p>Specific impulse is a standard measure of propellant-use performance. Higher specific impulse does not automatically mean higher thrust.</p>
+<h3>Major propulsion families</h3>
+<table>
+<tr><th>Technology</th><th>Principle</th><th>Application</th></tr>
+<tr><td>Chemical</td><td>Chemical energy produces hot expanding gas.</td><td>Launch vehicles and high-thrust manoeuvres.</td></tr>
+<tr><td>Electric</td><td>Electrical energy accelerates charged particles or heats propellant.</td><td>Long-duration spacecraft propulsion.</td></tr>
+<tr><td>Cold gas</td><td>Stored pressurised gas is released to produce thrust.</td><td>Small spacecraft control.</td></tr>
+<tr><td>Solar sail</td><td>Momentum from sunlight exerts force on a reflective sail.</td><td>Specialised long-duration missions.</td></tr>
+</table>
+<div class="callout"><b>Safety:</b> This course covers propulsion physics and system-level concepts. It does not provide propellant recipes, motor fabrication, ignition circuits or live motor testing instructions.</div>
+</section>
 
-      <h3>Thrust Equation</h3>
-      <div class="formula">
-        F = ṁ × Ve + (Pe − Pa) × Ae
-      </div>
-      <p>
-        F = thrust, ṁ = mass flow rate, Ve = exhaust velocity,
-        Pe = exit pressure, Pa = ambient pressure, and Ae = nozzle exit area.
-      </p>
+<section class="chapter" id="engines">
+<span class="tag">MODULE 06 · ENGINE SYSTEMS</span>
+<h2>Rocket Engine Systems</h2>
+<p>A propulsion system includes energy release, working-fluid management, flow control, thermal management, structural support, instrumentation and control.</p>
+<div class="grid">
+<div class="card"><h4>Combustion chamber</h4><p>In a chemical engine, this is the region where chemical energy is released into the working gas.</p></div>
+<div class="card"><h4>Nozzle</h4><p>Converts part of the gas's thermal and pressure energy into directed flow and exhaust momentum.</p></div>
+<div class="card"><h4>Feed and control systems</h4><p>Manage and monitor working fluids in systems designed for that purpose.</p></div>
+<div class="card"><h4>Thermal management</h4><p>Protects materials and components from demanding heat-transfer environments.</p></div>
+</div>
+<h3>Nozzle fundamentals</h3>
+<p>A converging-diverging nozzle can accelerate compressible gas to supersonic speed under suitable conditions. Flow behaviour depends on pressure, temperature, gas properties and nozzle geometry.</p>
+<h3>Engine performance</h3>
+<p>Thrust, efficiency, reliability, mass, operating life, controllability and thermal limits must be considered together. One performance number cannot describe an entire propulsion system.</p>
+</section>
 
-      <h3>Newton's Second Law</h3>
-      <div class="formula">
-        F = m × a
-      </div>
-      <p>Force equals mass multiplied by acceleration.</p>
+<section class="chapter" id="staging">
+<span class="tag">MODULE 07 · VEHICLE ARCHITECTURE</span>
+<h2>Multistage Rockets</h2>
+<p>A multistage vehicle uses two or more propulsion stages in sequence. After a stage completes its role, it may be separated so later flight does not need to accelerate that empty structure.</p>
+<h3>Why staging is useful</h3>
+<ul>
+<li>Reduces mass carried by later stages.</li>
+<li>Allows stages to be designed for different flight environments.</li>
+<li>Can improve overall mass efficiency.</li>
+<li>Introduces additional separation, reliability and control challenges.</li>
+</ul>
+<p>Staging is a systems-engineering problem involving structural interfaces, sequencing, trajectory design and reliability.</p>
+</section>
 
-      <h3>Tsiolkovsky Rocket Equation</h3>
-      <div class="formula">
-        Δv = Ve × ln(m₀ / mf)
-      </div>
-      <p>
-        Δv = change in velocity, Ve = effective exhaust velocity,
-        m₀ = initial mass, and mf = final mass.
-      </p>
-    </section>
+<section class="chapter" id="flight">
+<span class="tag">MODULE 08 · FLIGHT DYNAMICS</span>
+<h2>Rocket Flight Mechanics</h2>
+<p>Vehicle motion is governed by forces and moments. Engineers model translation, rotation, changing mass, gravity, aerodynamic loads and propulsion forces.</p>
+<div class="grid">
+<div class="card"><h4>Position</h4><p>Where the vehicle is in a chosen reference frame.</p></div>
+<div class="card"><h4>Velocity</h4><p>The rate of change of position, including speed and direction.</p></div>
+<div class="card"><h4>Acceleration</h4><p>The rate of change of velocity.</p></div>
+<div class="card"><h4>Attitude</h4><p>The orientation of the vehicle relative to a reference frame.</p></div>
+</div>
+<p>Flight analysis uses body-fixed, local-level, Earth-centred and inertial reference frames. Clear frame definitions are essential for navigation and control.</p>
+</section>
 
-    <section>
-      <h2>7. Understanding Space Orbits</h2>
-      <p>
-        An orbit is the curved path followed by an object around
-        another object due to gravity and its forward motion.
-      </p>
-      <ul>
-        <li><strong>Low Earth Orbit (LEO):</strong> Used by many Earth-observation satellites and the International Space Station.</li>
-        <li><strong>Geostationary Orbit (GEO):</strong> A high orbit where a satellite appears fixed above one point on Earth's equator.</li>
-        <li><strong>Polar Orbit:</strong> Passes over or near Earth's poles.</li>
-        <li><strong>Escape Trajectory:</strong> A path that allows a spacecraft to leave Earth's gravitational influence.</li>
-      </ul>
-    </section>
+<section class="chapter" id="orbit">
+<span class="tag">MODULE 09 · ASTRODYNAMICS</span>
+<h2>Orbital Mechanics</h2>
+<p>An orbit is motion around another body under gravity. A spacecraft in orbit is continuously falling toward the central body while its sideways velocity carries it around that body.</p>
+<h3>Classical orbital elements</h3>
+<ul>
+<li><b>Semi-major axis:</b> sets the scale of an ideal elliptical orbit.</li>
+<li><b>Eccentricity:</b> describes how circular or elongated the orbit is.</li>
+<li><b>Inclination:</b> tilt of the orbital plane.</li>
+<li><b>Ascending node:</b> describes the orientation of the orbital plane.</li>
+<li><b>Argument of periapsis:</b> orientation of the ellipse within its plane.</li>
+<li><b>True anomaly:</b> the object's position along the orbit.</li>
+</ul>
+<h3>Circular orbital speed</h3>
+<div class="formula">v = √(μ/r)</div>
+<p>μ is the gravitational parameter of the central body and r is distance from its centre. This ideal model neglects atmospheric drag and other perturbations.</p>
+<h3>Orbit types</h3>
+<p>Low Earth orbit, medium Earth orbit, geostationary orbit, polar orbit, highly elliptical orbit and escape trajectories serve different mission requirements.</p>
+</section>
 
-    <section>
-      <h2>8. Famous Space Launch Vehicles</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Saturn V</h3>
-          <p>The historic NASA rocket that carried astronauts to the Moon.</p>
-        </div>
-        <div class="card">
-          <h3>Falcon 9</h3>
-          <p>A partially reusable orbital launch vehicle developed by SpaceX.</p>
-        </div>
-        <div class="card">
-          <h3>LVM3</h3>
-          <p>India's heavy-lift launch vehicle developed by ISRO.</p>
-        </div>
-        <div class="card">
-          <h3>PSLV</h3>
-          <p>India's versatile launch vehicle used for many satellite missions.</p>
-        </div>
-      </div>
-    </section>
+<section class="chapter" id="gnc">
+<span class="tag">MODULE 10 · AVIONICS</span>
+<h2>Guidance, Navigation and Control</h2>
+<p>Guidance determines desired motion, navigation estimates the vehicle's current state, and control manages the difference between desired and estimated behaviour.</p>
+<div class="grid">
+<div class="card"><h4>Guidance</h4><p>Uses mission objectives and constraints to define desired motion.</p></div>
+<div class="card"><h4>Navigation</h4><p>Estimates position, velocity and attitude from measurements.</p></div>
+<div class="card"><h4>Control</h4><p>Uses feedback and actuators to manage motion and stability.</p></div>
+<div class="card"><h4>Avionics</h4><p>Includes computing, sensors, communications, power and data systems.</p></div>
+</div>
+<h3>Feedback control</h3>
+<p>A feedback system compares a measured state with a desired state. The error is used by a controller to calculate corrective action. Aerospace systems must account for noise, delays, uncertainty and actuator limits.</p>
+</section>
 
-    <section>
-      <h2>9. Test Your Rocket Science Knowledge</h2>
-      <div class="quiz">
-        <p><strong>Question:</strong> What law explains the basic working principle of a rocket?</p>
-        <button onclick="checkAnswer(false)">Newton's First Law</button>
-        <button onclick="checkAnswer(true)">Newton's Third Law</button>
-        <button onclick="checkAnswer(false)">Newton's Law of Gravitation</button>
-        <p id="answer"></p>
-      </div>
-    </section>
-
-    <section>
-      <h2>10. Keep Exploring</h2>
-      <p>
-        Rocket science is only the beginning. Continue learning about
-        aircraft, spacecraft, satellites, propulsion, and the universe.
-      </p>
-      <a class="back-link" href="index.html">← Back to AEROSPARK Home</a>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© 2026 AEROSPARK | Explore Beyond. Calculate the Impossible.</p>
-    <p>Made for curious minds and future aerospace engineers.</p>
-  </footer>
-
-  <script>
-    function checkAnswer(correct) {
-      const result = document.getElementById("answer");
-
-      if (correct) {
-        result.textContent = "Correct! Newton's Third Law explains rocket propulsion. 🚀";
-      } else {
-        result.textContent = "Not quite. Try again! Think about action and reaction.";
-      }
-    }
-  </script>
-
-</body>
-  </html>
-  
+<section class="chapter" id="materials">
+<span class="tag">MODULE 11 · MATERIALS SCIENCE</span>
+<h2>Aerospace Materials</h2>
+<p>Material selection involves strength, stiffness, density, temperature capability, fracture behaviour, corrosion, manufacturability, inspection and cost.</p>
+<table>
+<tr><th>Material</th><th>Characteristics</th><th>Considerations</th></tr>
+<tr
